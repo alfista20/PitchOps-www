@@ -1,0 +1,13 @@
+---
+import Landing from '../layouts/Landing.astro';
+import LandingPage from '../components/LandingPage.astro';
+import { defaultLang } from '../i18n/languages';
+import { ui } from '../i18n/ui';
+
+const lang = defaultLang;
+const content = ui[lang];
+---
+
+<Landing title={content.meta.title} description={content.meta.description} lang={lang}>
+  <LandingPage content={content} lang={lang} />
+</Landing>

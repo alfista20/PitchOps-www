@@ -1,0 +1,13 @@
+---
+import { localizedPath } from '../i18n/languages';
+
+const { content, lang } = Astro.props;
+---
+
+<h1>{content.docs.title}</h1>
+<p>{content.docs.intro}</p>
+
+<h2>{content.docs.availableDocuments}</h2>
+<ul>
+  <li><a href={localizedPath(lang, '/docs/getting-started/')}>{content.docs.gettingStarted}</a></li>
+</ul>

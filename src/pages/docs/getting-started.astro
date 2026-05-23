@@ -1,0 +1,13 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import GettingStartedDoc from '../../components/GettingStartedDoc.astro';
+import { defaultLang } from '../../i18n/languages';
+import { ui } from '../../i18n/ui';
+
+const lang = defaultLang;
+const content = ui[lang];
+---
+
+<Docs title={content.docs.gettingStarted} description={content.docs.description} lang={lang}>
+  <GettingStartedDoc content={content} />
+</Docs>

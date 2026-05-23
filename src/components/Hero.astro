@@ -1,0 +1,34 @@
+---
+import { site } from '../config/site';
+import { localizedPath } from '../i18n/languages';
+
+const { content, lang } = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">{content.eyebrow}</p>
+    <h1>{content.headline}</h1>
+    <p class="hero-subtitle">{content.subheadline}</p>
+    <p class="hero-copy">{content.description}</p>
+    <div class="hero-actions" aria-label={content.actionsLabel}>
+      <a class="button" href={site.appUrl}>{content.primaryButton} <span aria-hidden="true">&rarr;</span></a>
+      <a class="button button-secondary" href={localizedPath(lang, '/docs/')}>{content.secondaryButton}</a>
+    </div>
+  </div>
+  <div class="hero-panel" aria-hidden="true">
+    <div class="pitch-frame">
+      <div class="pitch-line pitch-line-top"></div>
+      <div class="pitch-line pitch-line-mid"></div>
+      <div class="pitch-line pitch-line-bottom"></div>
+      <div class="status-card status-card-one">
+        <span>{content.readiness}</span>
+        <strong>{content.venue}</strong>
+      </div>
+      <div class="status-card status-card-two">
+        <span>{content.usage}</span>
+        <strong>{content.matchday}</strong>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+---
+import { site } from '../config/site';
+import { equivalentPath, languages, localizedPath, type Lang } from '../i18n/languages';
+
+const { lang, content, currentPath } = Astro.props;
+const languageEntries = Object.entries(languages) as Array<[Lang, string]>;
+---
+
+<header class="site-header">
+  <a class="brand" href={localizedPath(lang, '/')} aria-label="PitchOps home">
+    <span class="brand-mark" aria-hidden="true">P</span>
+    <span>PitchOps</span>
+  </a>
+
+  <nav class="main-nav" aria-label="Primary navigation">
+    <a href={`${localizedPath(lang, '/')}#product`}>{content.nav.product}</a>
+    <a href={`${localizedPath(lang, '/')}#modules`}>{content.nav.modules}</a>
+    <a href={localizedPath(lang, '/docs/')}>{content.nav.documentation}</a>
+    <a href={`${localizedPath(lang, '/')}#contact`}>{content.nav.contact}</a>
+  </nav>
+
+  <div class="header-actions">
+    <label class="language-switcher">
+      <span>{content.nav.language}</span>
+      <select
+        aria-label={content.nav.language}
+        onchange="window.location.href = this.value"
+      >
+        {languageEntries.map(([code, label]) => (
+          <option value={equivalentPath(code, currentPath)} selected={code === lang}>
+            {label}
+          </option>
+        ))}
+      </select>
+    </label>
+    <a class="button button-small" href={site.appUrl}>{content.nav.login}</a>
+  </div>
+</header>

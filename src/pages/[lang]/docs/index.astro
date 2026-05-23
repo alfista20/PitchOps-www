@@ -1,0 +1,17 @@
+---
+import Docs from '../../../layouts/Docs.astro';
+import DocsOverview from '../../../components/DocsOverview.astro';
+import { prefixedLangs, type Lang } from '../../../i18n/languages';
+import { ui } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return prefixedLangs.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const content = ui[lang];
+---
+
+<Docs title={content.docs.title} description={content.docs.description} lang={lang}>
+  <DocsOverview content={content} lang={lang} />
+</Docs>

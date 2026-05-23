@@ -1,0 +1,18 @@
+---
+import { site } from '../config/site';
+import { localizedPath } from '../i18n/languages';
+
+const { content, lang } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div>
+    <strong>PitchOps</strong>
+    <p>{content.text}</p>
+  </div>
+  <div class="footer-links">
+    <a href={site.websiteUrl}>www.pitchops.app</a>
+    <a href={site.appUrl}>{content.openApp}</a>
+    <a href={localizedPath(lang, '/docs/')}>{content.documentation}</a>
+  </div>
+</footer>

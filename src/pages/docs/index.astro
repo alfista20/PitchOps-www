@@ -1,0 +1,13 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import DocsOverview from '../../components/DocsOverview.astro';
+import { defaultLang } from '../../i18n/languages';
+import { ui } from '../../i18n/ui';
+
+const lang = defaultLang;
+const content = ui[lang];
+---
+
+<Docs title={content.docs.title} description={content.docs.description} lang={lang}>
+  <DocsOverview content={content} lang={lang} />
+</Docs>
