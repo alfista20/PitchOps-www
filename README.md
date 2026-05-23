@@ -40,9 +40,20 @@ npm run preview
 
 ## Deployment
 
-The site is deployed to GitHub Pages using the workflow in
-`.github/workflows/deploy.yml`. On pushes to `main`, GitHub Actions installs
-dependencies, builds the Astro site and publishes the `dist` directory to GitHub Pages.
+The site is deployed with Cloudflare Pages.
+
+Cloudflare Pages should be configured to build this repository from the production
+branch using:
+
+```txt
+npm run build
+```
+
+The static output directory is:
+
+```txt
+dist
+```
 
 ## Domains
 
@@ -58,11 +69,7 @@ The PitchOps application is separate and is linked from Login / Open PitchOps bu
 https://pitchops.app
 ```
 
-The custom GitHub Pages domain is configured by `public/CNAME`, which contains:
-
-```txt
-www.pitchops.app
-```
+The custom domain is managed in Cloudflare Pages.
 
 ## Language Routes
 
