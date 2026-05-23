@@ -12,7 +12,9 @@ const { content, lang } = Astro.props;
     <p class="hero-subtitle">{content.subheadline}</p>
     <p class="hero-copy">{content.description}</p>
     <div class="hero-actions" aria-label={content.actionsLabel}>
-      <a class="button" href={site.appUrl}>{content.primaryButton} <span aria-hidden="true">&rarr;</span></a>
+      <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">
+        {content.primaryButton} <span aria-hidden="true">&rarr;</span>
+      </a>
       <a class="button button-secondary" href={localizedPath(lang, '/docs/')}>{content.secondaryButton}</a>
     </div>
   </div>

@@ -33,6 +33,8 @@ const languageEntries = Object.entries(languages) as Array<[Lang, string]>;
         ))}
       </select>
     </label>
-    <a class="button button-small" href={site.appUrl}>{content.nav.login}</a>
+    <a class="button button-small" href={site.appUrl} target="_blank" rel="noopener noreferrer">
+      {content.nav.login}
+    </a>
   </div>
 </header>

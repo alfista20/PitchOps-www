@@ -10,5 +10,5 @@ const { content } = Astro.props;
     <h2>{content.title}</h2>
     <p>{content.text}</p>
   </div>
-  <a class="button" href={site.appUrl}>{content.button}</a>
+  <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.button}</a>
 </section>
