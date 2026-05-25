@@ -20,13 +20,14 @@ const img = (name: string) => `${imageBase}${name}.png`;
       <a class="button button-secondary" href="#guide">{content.hero.secondaryButton}</a>
     </div>
   </div>
-  <div class="phone-stage" aria-label="PitchOps product screenshots">
-    <figure class="phone-mockup phone-light">
-      <img src={img('dashboard-light.png')} alt="PitchOps light dashboard screenshot" loading="eager" />
-    </figure>
-    <figure class="phone-mockup phone-dark">
-      <img src={img('dashboard-dark.png')} alt="PitchOps dark dashboard screenshot" loading="eager" />
-    </figure>
+
+  <div class="stadium-panel" aria-label="PitchOps stadium visual">
+    <img src="/images/brand/pitchops-stadium-hero.png" alt="Futuristic football stadium at night" loading="eager" />
+    <div class="stadium-glass-card">
+      <span>Live operations</span>
+      <strong>Pitch readiness</strong>
+      <p>Tasks, usage, schedule and agronomy connected in one view.</p>
+    </div>
   </div>
 </section>
 
@@ -34,13 +35,35 @@ const img = (name: string) => `${imageBase}${name}.png`;
   {content.strip.map((item: string) => <span>{item}</span>)}
 </section>
 
-<section class="section" id="product">
+<section class="section why-section" id="product">
   <div class="split-layout">
+    <div>
+      <p class="eyebrow">{content.why.eyebrow}</p>
+      <h2>{content.why.title}</h2>
+    </div>
+    <div class="why-panel">
+      <ul class="problem-list">
+        {content.why.problems.map((problem: string) => <li>{problem}</li>)}
+      </ul>
+      <div class="solution-panel">
+        <h3>{content.why.solutionTitle}</h3>
+        <p>{content.why.solutionText}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section module-section">
+  <div class="module-shell">
     <div>
       <p class="eyebrow">{content.module.eyebrow}</p>
       <h2>{content.module.title}</h2>
+      <p>{content.module.text}</p>
     </div>
-    <p>{content.module.text}</p>
+    <figure class="module-screens">
+      <img class="module-screen-main" src={img('dashboard-dark.png')} alt="PitchOps dashboard screenshot" loading="lazy" />
+      <img class="module-screen-float" src={img('task-list-dark.png')} alt="PitchOps task list screenshot" loading="lazy" />
+    </figure>
   </div>
 </section>
 
@@ -59,9 +82,9 @@ const img = (name: string) => `${imageBase}${name}.png`;
     <p class="eyebrow">{content.guide.eyebrow}</p>
     <h2>{content.guide.title}</h2>
   </div>
-  <div class="steps-grid">
+  <div class="walkthrough">
     {content.guide.steps.map((step: { title: string; text: string }, index: number) => (
-      <article class="step-card">
+      <article class="walkthrough-step">
         <span>{String(index + 1).padStart(2, '0')}</span>
         <h3>{step.title}</h3>
         <p>{step.text}</p>
@@ -91,7 +114,7 @@ const img = (name: string) => `${imageBase}${name}.png`;
   </div>
 </section>
 
-<section class="section section-muted" id="roles">
+<section class="section roles-section" id="roles">
   <div class="section-heading">
     <p class="eyebrow">{content.roles.eyebrow}</p>
     <h2>{content.roles.title}</h2>
@@ -106,26 +129,9 @@ const img = (name: string) => `${imageBase}${name}.png`;
   </div>
 </section>
 
-<section class="section why-section">
-  <div class="split-layout">
-    <div>
-      <p class="eyebrow">{content.why.eyebrow}</p>
-      <h2>{content.why.title}</h2>
-    </div>
-    <div>
-      <ul class="problem-list">
-        {content.why.problems.map((problem: string) => <li>{problem}</li>)}
-      </ul>
-      <div class="solution-panel">
-        <h3>{content.why.solutionTitle}</h3>
-        <p>{content.why.solutionText}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="cta-section">
   <div>
+    <p class="eyebrow">PitchOps</p>
     <h2>{content.cta.title}</h2>
     <p>{content.cta.text}</p>
   </div>
