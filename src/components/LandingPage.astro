@@ -12,6 +12,9 @@ const img = (name: string) => `${imageBase}${name}.png`;
     <h1>{content.hero.headline}</h1>
     <p class="hero-subtitle">{content.hero.subheadline}</p>
     <p class="hero-copy">{content.hero.description}</p>
+    <div class="hero-signals" aria-label="Operational signals">
+      {content.hero.signals.map((signal: string) => <span>{signal}</span>)}
+    </div>
     <div class="hero-actions" aria-label="Primary actions">
       <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.hero.primaryButton}</a>
       <a class="button button-secondary" href="#guide">{content.hero.secondaryButton}</a>
@@ -39,6 +42,16 @@ const img = (name: string) => `${imageBase}${name}.png`;
     </div>
     <p>{content.module.text}</p>
   </div>
+</section>
+
+<section class="operations-band" aria-label="Operational overview">
+  {content.operations.map((item: { title: string; text: string }, index: number) => (
+    <div>
+      <span>{String(index + 1).padStart(2, '0')}</span>
+      <strong>{item.title}</strong>
+      <p>{item.text}</p>
+    </div>
+  ))}
 </section>
 
 <section class="section section-dark" id="guide">

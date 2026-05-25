@@ -18,11 +18,13 @@ export const ui: Record<Lang, {
     headline: string;
     subheadline: string;
     description: string;
+    signals: string[];
     primaryButton: string;
     secondaryButton: string;
   };
   strip: string[];
   module: { eyebrow: string; title: string; text: string };
+  operations: Card[];
   guide: { eyebrow: string; title: string; steps: Card[] };
   features: { eyebrow: string; title: string; items: Feature[] };
   roles: { eyebrow: string; title: string; cards: Card[] };
@@ -64,6 +66,7 @@ export const ui: Record<Lang, {
       subheadline: 'PitchOps gives grounds teams and managers one structured place to plan, log, review and report pitch work.',
       description:
         'Move beyond scattered spreadsheets, chat updates and unstructured photos. PitchOps turns daily maintenance, pitch usage, schedules, stats and agronomy records into an operational system.',
+      signals: ['Multi-venue visibility', 'Matchday readiness', 'Grounds team records'],
       primaryButton: 'Open PitchOps',
       secondaryButton: 'Explore Pitch Operations',
     },
@@ -74,6 +77,11 @@ export const ui: Record<Lang, {
       text:
         'The Pitch Operations module keeps the venue dashboard, task log, usage records, weekly and monthly schedule, statistics and fertilizing history connected. Teams can see what happened, what is planned and what needs attention before the next session or match.',
     },
+    operations: [
+      { title: 'Plan', text: 'Tasks, usage and schedule windows aligned before pressure arrives.' },
+      { title: 'Record', text: 'Daily maintenance, photos, staff notes and pitch load captured in context.' },
+      { title: 'Report', text: 'Stats, trends and history prepared for operational review.' },
+    ],
     guide: {
       eyebrow: 'Guided walkthrough',
       title: 'How to navigate Pitch Operations',
@@ -102,7 +110,6 @@ export const ui: Record<Lang, {
       eyebrow: 'Roles',
       title: 'Clear access for every operational responsibility.',
       cards: [
-        { title: 'Admin', text: 'Controls setup, structure and cross-venue visibility.' },
         { title: 'Area Manager', text: 'Coordinates multiple venues and reviews operational consistency.' },
         { title: 'Venue Manager', text: 'Runs the local schedule, tasks, usage and reporting flow.' },
         { title: 'Grounds Team', text: 'Logs daily maintenance and keeps records accurate from the field.' },
@@ -172,76 +179,81 @@ export const ui: Record<Lang, {
   },
   pl: {
     meta: {
-      title: 'PitchOps | Operacje boisk pilkarskich',
+      title: 'PitchOps | Operacje boisk piłkarskich',
       description:
-        'PitchOps porzadkuje zadania utrzymaniowe, wykorzystanie boisk, harmonogramy, statystyki i historie agronomiczna w jednym miejscu operacyjnym.',
+        'PitchOps porządkuje zadania utrzymaniowe, wykorzystanie boisk, harmonogramy, statystyki i historię agronomiczną w jednym miejscu operacyjnym.',
     },
-    nav: { product: 'Produkt', guide: 'Jak dziala', roles: 'Role', contact: 'Kontakt', login: 'Otworz PitchOps', language: 'Jezyk' },
+    nav: { product: 'Produkt', guide: 'Jak działa', roles: 'Role', contact: 'Kontakt', login: 'Otwórz PitchOps', language: 'Język' },
     hero: {
-      eyebrow: 'Profesjonalne operacje pilkarskie',
-      headline: 'Operacje boisk przygotowane pod gotowosc meczowa.',
-      subheadline: 'PitchOps daje zespolom utrzymania i managerom jedno uporzadkowane miejsce do planowania, rejestrowania i raportowania pracy boisk.',
+      eyebrow: 'Profesjonalne operacje piłkarskie',
+      headline: 'Operacje boisk przygotowane pod gotowość meczową.',
+      subheadline: 'PitchOps daje zespołom utrzymania i managerom jedno uporządkowane miejsce do planowania, rejestrowania i raportowania pracy boisk.',
       description:
-        'Zamiast rozproszonych arkuszy, wiadomosci i zdjec bez kontekstu, PitchOps laczy codzienne utrzymanie, wykorzystanie boisk, harmonogram, statystyki i historie nawozenia.',
-      primaryButton: 'Otworz PitchOps',
+        'Zamiast rozproszonych arkuszy, wiadomości i zdjęć bez kontekstu, PitchOps łączy codzienne utrzymanie, wykorzystanie boisk, harmonogram, statystyki i historię nawożenia.',
+      signals: ['Widoczność wielu obiektów', 'Gotowość meczowa', 'Zapisy zespołu utrzymania'],
+      primaryButton: 'Otwórz PitchOps',
       secondaryButton: 'Poznaj Pitch Operations',
     },
     strip: ['Operacje boisk', 'Historia utrzymania', 'Wykorzystanie boiska', 'Planowanie harmonogramu', 'Statystyki i raporty', 'Zapisy agronomiczne'],
     module: {
-      eyebrow: 'Modul Pitch Operations',
-      title: 'Codzienne centrum pracy dla zarzadzania boiskiem.',
+      eyebrow: 'Moduł Pitch Operations',
+      title: 'Codzienne centrum pracy dla zarządzania boiskiem.',
       text:
-        'Modul Pitch Operations laczy dashboard obiektu, rejestr zadan, wykorzystanie, harmonogram tygodniowy i miesieczny, statystyki oraz historie nawozenia. Zespol widzi, co sie wydarzylo, co jest zaplanowane i co wymaga uwagi.',
+        'Moduł Pitch Operations łączy dashboard obiektu, rejestr zadań, wykorzystanie, harmonogram tygodniowy i miesięczny, statystyki oraz historię nawożenia. Zespół widzi, co się wydarzyło, co jest zaplanowane i co wymaga uwagi.',
     },
+    operations: [
+      { title: 'Planuj', text: 'Zadania, użycie i okna harmonogramu uporządkowane zanim pojawi się presja.' },
+      { title: 'Rejestruj', text: 'Codzienne utrzymanie, zdjęcia, notatki zespołu i obciążenie boiska w kontekście.' },
+      { title: 'Raportuj', text: 'Statystyki, trendy i historia gotowe do przeglądu operacyjnego.' },
+    ],
     guide: {
       eyebrow: 'Przewodnik',
-      title: 'Jak poruszac sie po Pitch Operations',
+      title: 'Jak poruszać się po Pitch Operations',
       steps: [
-        { title: 'Zacznij od dashboardu obiektu', text: 'Sprawdz status dnia, priorytety i ostatnie sygnaly operacyjne.' },
-        { title: 'Rejestruj codzienne zadania', text: 'Zapisuj wykonane prace wraz z notatkami, personelem i zdjeciami.' },
-        { title: 'Dodawaj wykorzystanie boiska', text: 'Rejestruj mecze, treningi i rozgrzewki, aby historia obciazenia byla wiarygodna.' },
-        { title: 'Planuj i przegladaj harmonogram', text: 'Korzystaj z widoku tygodnia i miesiaca do koordynacji zadan oraz uzycia boiska.' },
-        { title: 'Monitoruj statystyki i raporty', text: 'Zamieniaj dane operacyjne w praktyczne informacje dla managerow.' },
-        { title: 'Analizuj historie nawozenia', text: 'Sledz aplikacje i kierunek zmian skladnikow odzywczych.' },
+        { title: 'Zacznij od dashboardu obiektu', text: 'Sprawdź status dnia, priorytety i ostatnie sygnały operacyjne.' },
+        { title: 'Rejestruj codzienne zadania', text: 'Zapisuj wykonane prace wraz z notatkami, personelem i zdjęciami.' },
+        { title: 'Dodawaj wykorzystanie boiska', text: 'Rejestruj mecze, treningi i rozgrzewki, aby historia obciążenia była wiarygodna.' },
+        { title: 'Planuj i przeglądaj harmonogram', text: 'Korzystaj z widoku tygodnia i miesiąca do koordynacji zadań oraz użycia boiska.' },
+        { title: 'Monitoruj statystyki i raporty', text: 'Zamieniaj dane operacyjne w praktyczne informacje dla managerów.' },
+        { title: 'Analizuj historię nawożenia', text: 'Śledź aplikacje i kierunek zmian składników odżywczych.' },
       ],
     },
     features: {
       eyebrow: 'Funkcje',
-      title: 'Zbudowane wokol realnego rytmu pracy boiskowej.',
+      title: 'Zbudowane wokół realnego rytmu pracy boiskowej.',
       items: [
-        { title: 'Dashboard: jedno miejsce na dzienne operacje', text: 'Przejrzysty start dla statusu obiektu, aktywnosci i kolejnych dzialan.', image: 'dashboard-light.png', alt: 'Zrzut ekranu dashboardu PitchOps' },
-        { title: 'Zadanie: zapis pracy utrzymaniowej', text: 'Notatki, personel, kontekst wykonania i zdjecia w jednym rekordzie.', image: 'task-modal-light.png', alt: 'Zrzut ekranu zadania PitchOps' },
-        { title: 'Uzycie: obciazenie pilkarskie', text: 'Rejestr meczow, treningow i rozgrzewek jako czytelna historia boiska.', image: 'usage-light.png', alt: 'Zrzut ekranu uzycia boiska PitchOps' },
-        { title: 'Harmonogram: tydzien i miesiac', text: 'Planowanie zadan i wykorzystania w widokach operacyjnych.', image: 'schedule-week-light.png', alt: 'Zrzut ekranu harmonogramu PitchOps' },
-        { title: 'Statystyki: wnioski operacyjne', text: 'Sumy, wzorce i widoki raportowe na podstawie codziennych zapisow.', image: 'stats-light.png', alt: 'Zrzut ekranu statystyk PitchOps' },
-        { title: 'Nawozenie: historia agronomiczna', text: 'Aplikacje, produkty i projekcja skladnikow bez utraty kontekstu operacyjnego.', image: 'fertilizing-history-light.png', alt: 'Zrzut ekranu historii nawozenia PitchOps' },
+        { title: 'Dashboard: jedno miejsce na dzienne operacje', text: 'Przejrzysty start dla statusu obiektu, aktywności i kolejnych działań.', image: 'dashboard-light.png', alt: 'Zrzut ekranu dashboardu PitchOps' },
+        { title: 'Zadanie: zapis pracy utrzymaniowej', text: 'Notatki, personel, kontekst wykonania i zdjęcia w jednym rekordzie.', image: 'task-modal-light.png', alt: 'Zrzut ekranu zadania PitchOps' },
+        { title: 'Użycie: obciążenie piłkarskie', text: 'Rejestr meczów, treningów i rozgrzewek jako czytelna historia boiska.', image: 'usage-light.png', alt: 'Zrzut ekranu użycia boiska PitchOps' },
+        { title: 'Harmonogram: tydzień i miesiąc', text: 'Planowanie zadań i wykorzystania w widokach operacyjnych.', image: 'schedule-week-light.png', alt: 'Zrzut ekranu harmonogramu PitchOps' },
+        { title: 'Statystyki: wnioski operacyjne', text: 'Sumy, wzorce i widoki raportowe na podstawie codziennych zapisów.', image: 'stats-light.png', alt: 'Zrzut ekranu statystyk PitchOps' },
+        { title: 'Nawożenie: historia agronomiczna', text: 'Aplikacje, produkty i projekcja składników bez utraty kontekstu operacyjnego.', image: 'fertilizing-history-light.png', alt: 'Zrzut ekranu historii nawożenia PitchOps' },
       ],
     },
     roles: {
       eyebrow: 'Role',
-      title: 'Dostep dopasowany do odpowiedzialnosci.',
+      title: 'Dostęp dopasowany do odpowiedzialności.',
       cards: [
-        { title: 'Admin', text: 'Zarzadza konfiguracja, struktura i widocznoscia wielu obiektow.' },
-        { title: 'Area Manager', text: 'Koordynuje obiekty i porownuje spojnosc operacyjna.' },
-        { title: 'Venue Manager', text: 'Prowadzi lokalny harmonogram, zadania, uzycie i raporty.' },
-        { title: 'Grounds Team', text: 'Rejestruje codzienne prace i utrzymuje dokladnosc danych.' },
-        { title: 'Viewer / Read-only', text: 'Przeglada status i raporty bez zmiany danych.' },
+        { title: 'Area Manager', text: 'Koordynuje obiekty i porównuje spójność operacyjną.' },
+        { title: 'Venue Manager', text: 'Prowadzi lokalny harmonogram, zadania, użycie i raporty.' },
+        { title: 'Grounds Team', text: 'Rejestruje codzienne prace i utrzymuje dokładność danych.' },
+        { title: 'Viewer / Read-only', text: 'Przegląda status i raporty bez zmiany danych.' },
       ],
     },
     why: {
       eyebrow: 'Dlaczego PitchOps',
-      title: 'Praca boiskowa potrzebuje lepszej struktury niz narzedzia wokol niej.',
-      problems: ['Rozproszone arkusze Excel', 'Aktualizacje ginace w WhatsApp', 'Zdjecia bez struktury', 'Slaba historia utrzymania', 'Trudne raportowanie wielu obiektow'],
-      solutionTitle: 'PitchOps porzadkuje caly proces.',
-      solutionText: 'Laczy utrzymanie, uzycie, harmonogramy, statystyki i agronomie w jednym produkcie dla operacji boisk pilkarskich.',
+      title: 'Praca boiskowa potrzebuje lepszej struktury niż narzędzia wokół niej.',
+      problems: ['Rozproszone arkusze Excel', 'Aktualizacje ginące w WhatsApp', 'Zdjęcia bez struktury', 'Słaba historia utrzymania', 'Trudne raportowanie wielu obiektów'],
+      solutionTitle: 'PitchOps porządkuje cały proces.',
+      solutionText: 'Łączy utrzymanie, użycie, harmonogramy, statystyki i agronomię w jednym produkcie dla operacji boisk piłkarskich.',
     },
-    cta: { title: 'Otworz PitchOps dla uporzadkowanych operacji boisk.', text: 'Polacz utrzymanie, uzycie i raportowanie w jednym zaufanym miejscu.', button: 'Otworz PitchOps' },
-    footer: { text: 'Publiczna strona produktu dla modulu Pitch Operations.', privacy: 'Polityka prywatnosci', cookies: 'Polityka cookies', terms: 'Regulamin', contact: 'Kontakt', openApp: 'Otworz PitchOps', guide: 'Przewodnik' },
+    cta: { title: 'Otwórz PitchOps dla uporządkowanych operacji boisk.', text: 'Połącz utrzymanie, użycie i raportowanie w jednym zaufanym miejscu.', button: 'Otwórz PitchOps' },
+    footer: { text: 'Publiczna strona produktu dla modułu Pitch Operations.', privacy: 'Polityka prywatności', cookies: 'Polityka cookies', terms: 'Regulamin', contact: 'Kontakt', openApp: 'Otwórz PitchOps', guide: 'Przewodnik' },
     infoPages: {
-      privacy: { title: 'Polityka prywatnosci', description: 'Prosty opis prywatnosci strony PitchOps.', body: ['Ta publiczna strona prezentuje PitchOps i nie obsluguje kont ani procesow aplikacji.', 'Dane kontaktowe przekazane PitchOps sa uzywane do odpowiedzi i komunikacji biznesowej.', 'Aplikacja PitchOps jest oddzielna od tej statycznej strony informacyjnej.'] },
-      cookies: { title: 'Polityka cookies', description: 'Informacje o cookies na stronie PitchOps.', body: ['Ta strona jest obecnie statyczna strona informacyjna.', 'Nie uzywa cookies marketingowych, chyba ze w przyszlosci zostana dodane narzedzia analityczne.', 'Po dodaniu analityki ta strona powinna zostac zaktualizowana przed jej wlaczeniem.'] },
-      terms: { title: 'Regulamin', description: 'Proste zasady korzystania ze strony PitchOps.', body: ['Informacje na stronie sluza ogolnej komunikacji produktowej.', 'PitchOps moze aktualizowac tresci, funkcje i opisy wraz z rozwojem produktu.', 'Korzystanie z aplikacji PitchOps moze podlegac oddzielnym warunkom.'] },
-      contact: { title: 'Kontakt', description: 'Kontakt w sprawie PitchOps.', body: ['W sprawach produktu, prezentacji lub rozmow operacyjnych skontaktuj sie z zespolem PitchOps.', 'Ta strona ma charakter informacyjny; wsparcie i procesy kont odbywaja sie w aplikacji lub uzgodnionych kanalach.'], emailLabel: 'Email' },
+      privacy: { title: 'Polityka prywatności', description: 'Prosty opis prywatności strony PitchOps.', body: ['Ta publiczna strona prezentuje PitchOps i nie obsługuje kont ani procesów aplikacji.', 'Dane kontaktowe przekazane PitchOps są używane do odpowiedzi i komunikacji biznesowej.', 'Aplikacja PitchOps jest oddzielna od tej statycznej strony informacyjnej.'] },
+      cookies: { title: 'Polityka cookies', description: 'Informacje o cookies na stronie PitchOps.', body: ['Ta strona jest obecnie statyczną stroną informacyjną.', 'Nie używa cookies marketingowych, chyba że w przyszłości zostaną dodane narzędzia analityczne.', 'Po dodaniu analityki ta strona powinna zostać zaktualizowana przed jej włączeniem.'] },
+      terms: { title: 'Regulamin', description: 'Proste zasady korzystania ze strony PitchOps.', body: ['Informacje na stronie służą ogólnej komunikacji produktowej.', 'PitchOps może aktualizować treści, funkcje i opisy wraz z rozwojem produktu.', 'Korzystanie z aplikacji PitchOps może podlegać oddzielnym warunkom.'] },
+      contact: { title: 'Kontakt', description: 'Kontakt w sprawie PitchOps.', body: ['W sprawach produktu, prezentacji lub rozmów operacyjnych skontaktuj się z zespołem PitchOps.', 'Ta strona ma charakter informacyjny; wsparcie i procesy kont odbywają się w aplikacji lub uzgodnionych kanałach.'], emailLabel: 'Email' },
     },
   },
   de: {} as any,
