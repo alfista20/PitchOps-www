@@ -1,0 +1,16 @@
+---
+import { site } from '../config/site';
+
+const { page } = Astro.props;
+---
+
+<section class="info-page">
+  <p class="eyebrow">PitchOps</p>
+  <h1>{page.title}</h1>
+  <p class="lead">{page.description}</p>
+  <div class="info-panel">
+    {page.body.map((paragraph: string) => <p>{paragraph}</p>)}
+    {page.emailLabel && <p><strong>{page.emailLabel}:</strong> <a href="mailto:hello@pitchops.app">hello@pitchops.app</a></p>}
+    {page.emailLabel && <p><a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">Open PitchOps</a></p>}
+  </div>
+</section>

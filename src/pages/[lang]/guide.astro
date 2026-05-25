@@ -1,6 +1,6 @@
 ---
-import RedirectPage from '../../../components/RedirectPage.astro';
-import { localizedPath, prefixedLangs, type Lang } from '../../../i18n/languages';
+import RedirectPage from '../../components/RedirectPage.astro';
+import { localizedPath, prefixedLangs, type Lang } from '../../i18n/languages';
 
 export function getStaticPaths() {
   return prefixedLangs.map((lang) => ({ params: { lang } }));

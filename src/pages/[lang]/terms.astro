@@ -1,0 +1,17 @@
+---
+import Landing from '../../layouts/Landing.astro';
+import InfoPage from '../../components/InfoPage.astro';
+import { prefixedLangs, type Lang } from '../../i18n/languages';
+import { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return prefixedLangs.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const page = ui[lang].infoPages.terms;
+---
+
+<Landing title={`PitchOps | ${page.title}`} description={page.description} lang={lang}>
+  <InfoPage page={page} />
+</Landing>

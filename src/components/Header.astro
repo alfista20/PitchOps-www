@@ -14,9 +14,9 @@ const languageEntries = Object.entries(languages) as Array<[Lang, string]>;
 
   <nav class="main-nav" aria-label="Primary navigation">
     <a href={`${localizedPath(lang, '/')}#product`}>{content.nav.product}</a>
-    <a href={`${localizedPath(lang, '/')}#modules`}>{content.nav.modules}</a>
-    <a href={localizedPath(lang, '/docs/')}>{content.nav.documentation}</a>
-    <a href={`${localizedPath(lang, '/')}#contact`}>{content.nav.contact}</a>
+    <a href={`${localizedPath(lang, '/')}#guide`}>{content.nav.guide}</a>
+    <a href={`${localizedPath(lang, '/')}#roles`}>{content.nav.roles}</a>
+    <a href={localizedPath(lang, '/contact/')}>{content.nav.contact}</a>
   </nav>
 
   <div class="header-actions">

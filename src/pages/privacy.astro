@@ -1,0 +1,13 @@
+---
+import Landing from '../layouts/Landing.astro';
+import InfoPage from '../components/InfoPage.astro';
+import { defaultLang } from '../i18n/languages';
+import { ui } from '../i18n/ui';
+
+const lang = defaultLang;
+const page = ui[lang].infoPages.privacy;
+---
+
+<Landing title={`PitchOps | ${page.title}`} description={page.description} lang={lang}>
+  <InfoPage page={page} />
+</Landing>

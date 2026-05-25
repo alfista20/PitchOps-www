@@ -1,34 +1,120 @@
 ---
-import Hero from './Hero.astro';
-import ModuleCards from './ModuleCards.astro';
-import AudienceSection from './AudienceSection.astro';
-import CtaSection from './CtaSection.astro';
+import { site } from '../config/site';
 
-const { content, lang } = Astro.props;
+const { content } = Astro.props;
+const imageBase = '/images/pitch-operations/';
+const img = (name: string) => `${imageBase}${name}.png`;
 ---
 
-<Hero content={content.hero} lang={lang} />
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">{content.hero.eyebrow}</p>
+    <h1>{content.hero.headline}</h1>
+    <p class="hero-subtitle">{content.hero.subheadline}</p>
+    <p class="hero-copy">{content.hero.description}</p>
+    <div class="hero-actions" aria-label="Primary actions">
+      <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.hero.primaryButton}</a>
+      <a class="button button-secondary" href="#guide">{content.hero.secondaryButton}</a>
+    </div>
+  </div>
+  <div class="phone-stage" aria-label="PitchOps product screenshots">
+    <figure class="phone-mockup phone-light">
+      <img src={img('dashboard-light.png')} alt="PitchOps light dashboard screenshot" loading="eager" />
+    </figure>
+    <figure class="phone-mockup phone-dark">
+      <img src={img('dashboard-dark.png')} alt="PitchOps dark dashboard screenshot" loading="eager" />
+    </figure>
+  </div>
+</section>
+
+<section class="positioning-strip" aria-label="PitchOps capabilities">
+  {content.strip.map((item: string) => <span>{item}</span>)}
+</section>
 
 <section class="section" id="product">
   <div class="split-layout">
     <div>
-      <p class="eyebrow">{content.product.eyebrow}</p>
-      <h2>{content.product.title}</h2>
+      <p class="eyebrow">{content.module.eyebrow}</p>
+      <h2>{content.module.title}</h2>
     </div>
-    <p>{content.product.text}</p>
+    <p>{content.module.text}</p>
   </div>
 </section>
 
-<section class="section section-dark">
+<section class="section section-dark" id="guide">
+  <div class="section-heading">
+    <p class="eyebrow">{content.guide.eyebrow}</p>
+    <h2>{content.guide.title}</h2>
+  </div>
+  <div class="steps-grid">
+    {content.guide.steps.map((step: { title: string; text: string }, index: number) => (
+      <article class="step-card">
+        <span>{String(index + 1).padStart(2, '0')}</span>
+        <h3>{step.title}</h3>
+        <p>{step.text}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="section feature-section" id="features">
+  <div class="section-heading">
+    <p class="eyebrow">{content.features.eyebrow}</p>
+    <h2>{content.features.title}</h2>
+  </div>
+  <div class="feature-stack">
+    {content.features.items.map((feature: { title: string; text: string; image: string; alt: string }, index: number) => (
+      <article class:list={['feature-block', index % 2 === 1 && 'feature-reverse']}>
+        <div class="feature-copy">
+          <p class="feature-kicker">Pitch Operations</p>
+          <h3>{feature.title}</h3>
+          <p>{feature.text}</p>
+        </div>
+        <figure class="screenshot-frame">
+          <img src={img(feature.image)} alt={feature.alt} loading="lazy" />
+        </figure>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="section section-muted" id="roles">
+  <div class="section-heading">
+    <p class="eyebrow">{content.roles.eyebrow}</p>
+    <h2>{content.roles.title}</h2>
+  </div>
+  <div class="card-grid role-grid">
+    {content.roles.cards.map((card: { title: string; text: string }) => (
+      <article class="info-card">
+        <h3>{card.title}</h3>
+        <p>{card.text}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="section why-section">
   <div class="split-layout">
     <div>
-      <p class="eyebrow">{content.problem.eyebrow}</p>
-      <h2>{content.problem.title}</h2>
+      <p class="eyebrow">{content.why.eyebrow}</p>
+      <h2>{content.why.title}</h2>
     </div>
-    <p>{content.problem.text}</p>
+    <div>
+      <ul class="problem-list">
+        {content.why.problems.map((problem: string) => <li>{problem}</li>)}
+      </ul>
+      <div class="solution-panel">
+        <h3>{content.why.solutionTitle}</h3>
+        <p>{content.why.solutionText}</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<ModuleCards content={content.modules} />
-<AudienceSection content={content.audience} />
-<CtaSection content={content.cta} />
+<section class="cta-section">
+  <div>
+    <h2>{content.cta.title}</h2>
+    <p>{content.cta.text}</p>
+  </div>
+  <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.cta.button}</a>
+</section>

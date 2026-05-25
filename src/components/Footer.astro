@@ -11,8 +11,11 @@ const { content, lang } = Astro.props;
     <p>{content.text}</p>
   </div>
   <div class="footer-links">
-    <a href={site.websiteUrl}>www.pitchops.app</a>
+    <a href={localizedPath(lang, '/privacy/')}>{content.privacy}</a>
+    <a href={localizedPath(lang, '/cookies/')}>{content.cookies}</a>
+    <a href={localizedPath(lang, '/terms/')}>{content.terms}</a>
+    <a href={localizedPath(lang, '/contact/')}>{content.contact}</a>
     <a href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.openApp}</a>
-    <a href={localizedPath(lang, '/docs/')}>{content.documentation}</a>
+    <a href={localizedPath(lang, '/guide/')}>{content.guide}</a>
   </div>
 </footer>

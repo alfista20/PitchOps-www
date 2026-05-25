@@ -8,8 +8,8 @@ import { ui } from '../i18n/ui';
 const {
   frontmatter = {},
   lang = defaultLang,
-  title = frontmatter.title ?? ui[lang].docs.title,
-  description = ui[lang].docs.description,
+  title = frontmatter.title ?? ui[lang].meta.title,
+  description = ui[lang].meta.description,
 } = Astro.props as {
   frontmatter?: { title?: string };
   lang?: Lang;
@@ -32,9 +32,9 @@ const content = ui[lang];
   <body>
     <Header lang={lang} content={content} currentPath={Astro.url.pathname} />
     <main class="docs-shell">
-      <aside class="docs-sidebar" aria-label="Documentation navigation">
-        <a href={localizedPath(lang, '/docs/')}>{content.docs.overview}</a>
-        <a href={localizedPath(lang, '/docs/getting-started/')}>{content.docs.gettingStarted}</a>
+      <aside class="docs-sidebar" aria-label="Guide navigation">
+        <a href={localizedPath(lang, '/guide/')}>{content.footer.guide}</a>
+        <a href={localizedPath(lang, '/contact/')}>{content.nav.contact}</a>
       </aside>
       <article class="docs-content">
         <slot />
