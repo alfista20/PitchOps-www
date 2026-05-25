@@ -3,7 +3,18 @@ import { site } from '../config/site';
 import { equivalentPath, languages, localizedPath, type Lang } from '../i18n/languages';
 
 const { lang, content, currentPath } = Astro.props;
-const languageEntries = Object.entries(languages) as Array<[Lang, string]>;
+const polishLanguageLabels: Record<Lang, string> = {
+  en: 'Angielski',
+  pl: 'Polski',
+  de: 'Niemiecki',
+  es: 'Hiszpański',
+  fr: 'Francuski',
+  pt: 'Portugalski',
+};
+const languageEntries = (Object.entries(languages) as Array<[Lang, string]>).map(([code, label]) => [
+  code,
+  lang === 'pl' ? polishLanguageLabels[code] : label,
+]) as Array<[Lang, string]>;
 ---
 
 <header class="site-header">

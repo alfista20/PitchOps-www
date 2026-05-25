@@ -7,6 +7,8 @@ export function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as Lang;
+const linkLabel = lang === 'pl' ? 'Przejdź do PitchOps' : 'Continue to PitchOps';
+const title = lang === 'pl' ? 'Przewodnik PitchOps' : 'PitchOps Guide';
 ---
 
-<RedirectPage title="PitchOps Guide" target={`${localizedPath(lang, '/')}#guide`} />
+<RedirectPage title={title} target={`${localizedPath(lang, '/')}#guide`} lang={lang} linkLabel={linkLabel} />

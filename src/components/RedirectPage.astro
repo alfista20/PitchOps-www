@@ -1,9 +1,9 @@
 ---
-const { title = 'PitchOps', target } = Astro.props;
+const { title = 'PitchOps', target, lang = 'en', linkLabel = 'Continue to PitchOps' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,6 +12,6 @@ const { title = 'PitchOps', target } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <p><a href={target}>Continue to PitchOps</a></p>
+    <p><a href={target}>{linkLabel}</a></p>
   </body>
 </html>

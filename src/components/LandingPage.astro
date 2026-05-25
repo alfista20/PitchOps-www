@@ -24,9 +24,9 @@ const img = (name: string) => `${imageBase}${name}.png`;
   <div class="stadium-panel" aria-label="PitchOps stadium visual">
     <img src="/images/brand/pitchops-stadium-hero.png" alt="Futuristic football stadium at night" loading="eager" />
     <div class="stadium-glass-card">
-      <span>Live operations</span>
-      <strong>Pitch readiness</strong>
-      <p>Tasks, usage, schedule and agronomy connected in one view.</p>
+      <span>{content.heroCard.eyebrow}</span>
+      <strong>{content.heroCard.title}</strong>
+      <p>{content.heroCard.text}</p>
     </div>
   </div>
 </section>
@@ -102,7 +102,7 @@ const img = (name: string) => `${imageBase}${name}.png`;
     {content.features.items.map((feature: { title: string; text: string; image: string; alt: string }, index: number) => (
       <article class:list={['feature-block', index % 2 === 1 && 'feature-reverse']}>
         <div class="feature-copy">
-          <p class="feature-kicker">Pitch Operations</p>
+          <p class="feature-kicker">{content.features.kicker}</p>
           <h3>{feature.title}</h3>
           <p>{feature.text}</p>
         </div>
