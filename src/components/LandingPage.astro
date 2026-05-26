@@ -12,17 +12,17 @@ const img = (name: string) => `${imageBase}${name}.png`;
     <h1>{content.hero.headline}</h1>
     <p class="hero-subtitle">{content.hero.subheadline}</p>
     <p class="hero-copy">{content.hero.description}</p>
-    <div class="hero-signals" aria-label="Operational signals">
+    <div class="hero-signals" aria-label={content.hero.eyebrow}>
       {content.hero.signals.map((signal: string) => <span>{signal}</span>)}
     </div>
-    <div class="hero-actions" aria-label="Primary actions">
+    <div class="hero-actions" aria-label={content.hero.primaryButton}>
       <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.hero.primaryButton}</a>
       <a class="button button-secondary" href="#guide">{content.hero.secondaryButton}</a>
     </div>
   </div>
 
-  <div class="stadium-panel" aria-label="PitchOps stadium visual">
-    <img src="/images/brand/pitchops-stadium-hero.png" alt="Futuristic football stadium at night" loading="eager" />
+  <div class="stadium-panel" aria-label={content.heroCard.title}>
+    <img src="/images/brand/pitchops-stadium-hero.png" alt={content.heroCard.title} loading="eager" />
     <div class="stadium-glass-card">
       <span>{content.heroCard.eyebrow}</span>
       <strong>{content.heroCard.title}</strong>
@@ -31,7 +31,7 @@ const img = (name: string) => `${imageBase}${name}.png`;
   </div>
 </section>
 
-<section class="positioning-strip" aria-label="PitchOps capabilities">
+<section class="positioning-strip" aria-label={content.module.eyebrow}>
   {content.strip.map((item: string) => <span>{item}</span>)}
 </section>
 
@@ -61,13 +61,13 @@ const img = (name: string) => `${imageBase}${name}.png`;
       <p>{content.module.text}</p>
     </div>
     <figure class="module-screens">
-      <img class="module-screen-main" src={img('dashboard-dark.png')} alt="PitchOps dashboard screenshot" loading="lazy" />
-      <img class="module-screen-float" src={img('task-list-dark.png')} alt="PitchOps task list screenshot" loading="lazy" />
+      <img class="module-screen-main" src={img('dashboard-dark.png')} alt={content.features.items[0].alt} loading="lazy" />
+      <img class="module-screen-float" src={img('task-list-dark.png')} alt={content.features.items[1].alt} loading="lazy" />
     </figure>
   </div>
 </section>
 
-<section class="operations-band" aria-label="Operational overview">
+<section class="operations-band" aria-label={content.operations.map((item: { title: string }) => item.title).join(', ')}>
   {content.operations.map((item: { title: string; text: string }, index: number) => (
     <div>
       <span>{String(index + 1).padStart(2, '0')}</span>

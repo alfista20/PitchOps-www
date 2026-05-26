@@ -2,22 +2,51 @@
 import { localizedPath, type Lang } from '../i18n/languages';
 
 const { lang } = Astro.props as { lang: Lang };
-const isPolish = lang === 'pl';
-const copy = isPolish
-  ? {
-      title: 'Cookies i analityka',
-      text: 'Używamy Google Analytics, żeby mierzyć zbiorczy ruch i ulepszać stronę PitchOps. Analityka uruchomi się tylko po Twojej zgodzie.',
-      accept: 'Akceptuję',
-      reject: 'Odrzuć',
-      link: 'Polityka cookies',
-    }
-  : {
-      title: 'Cookies and analytics',
-      text: 'We use Google Analytics to measure aggregate traffic and improve the PitchOps website. Analytics runs only after your consent.',
-      accept: 'Accept',
-      reject: 'Reject',
-      link: 'Cookie Policy',
-    };
+const copies: Record<Lang, { title: string; text: string; accept: string; reject: string; link: string }> = {
+  en: {
+    title: 'Cookies and analytics',
+    text: 'We use Google Analytics to measure aggregate traffic and improve the PitchOps website. Analytics runs only after your consent.',
+    accept: 'Accept',
+    reject: 'Reject',
+    link: 'Cookie Policy',
+  },
+  pl: {
+    title: 'Cookies i analityka',
+    text: 'Używamy Google Analytics, żeby mierzyć zbiorczy ruch i ulepszać stronę PitchOps. Analityka uruchomi się tylko po Twojej zgodzie.',
+    accept: 'Akceptuję',
+    reject: 'Odrzuć',
+    link: 'Polityka cookies',
+  },
+  de: {
+    title: 'Cookies und Analyse',
+    text: 'Wir verwenden Google Analytics, um aggregierten Traffic zu messen und die PitchOps-Website zu verbessern. Analytics startet nur nach Ihrer Zustimmung.',
+    accept: 'Akzeptieren',
+    reject: 'Ablehnen',
+    link: 'Cookie-Richtlinie',
+  },
+  es: {
+    title: 'Cookies y analítica',
+    text: 'Usamos Google Analytics para medir el tráfico agregado y mejorar el sitio de PitchOps. La analítica se activa solo con tu consentimiento.',
+    accept: 'Aceptar',
+    reject: 'Rechazar',
+    link: 'Política de cookies',
+  },
+  fr: {
+    title: 'Cookies et analyse',
+    text: 'Nous utilisons Google Analytics pour mesurer le trafic agrégé et améliorer le site PitchOps. L’analyse ne démarre qu’après votre consentement.',
+    accept: 'Accepter',
+    reject: 'Refuser',
+    link: 'Politique de cookies',
+  },
+  pt: {
+    title: 'Cookies e análise',
+    text: 'Usamos Google Analytics para medir tráfego agregado e melhorar o site PitchOps. A análise só é ativada após o seu consentimento.',
+    accept: 'Aceitar',
+    reject: 'Recusar',
+    link: 'Política de cookies',
+  },
+};
+const copy = copies[lang];
 ---
 
 <section class="cookie-consent" data-cookie-consent hidden aria-label={copy.title}>
