@@ -38,6 +38,14 @@ const socialImage = new URL('/apple-touch-icon.png', site.websiteUrl).toString()
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{title}</title>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XESXZQ97BR"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XESXZQ97BR');
+    </script>
   </head>
   <body>
     <Header lang={lang} content={content} currentPath={Astro.url.pathname} />

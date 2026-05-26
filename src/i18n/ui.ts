@@ -150,8 +150,8 @@ const en: PageContent = {
       description: 'Cookie information for the PitchOps public website.',
       body: [
         'This website is currently a static informational website.',
-        'It does not use marketing cookies unless analytics or similar services are added later.',
-        'If analytics are introduced, this page should be updated before they are enabled.',
+        'It uses Google Analytics to understand aggregate website traffic and improve the public website.',
+        'Google Analytics may use cookies or similar technologies to measure visits and usage patterns.',
       ],
     },
     terms: {
@@ -286,8 +286,8 @@ const pl: PageContent = {
       description: 'Informacje o cookies na stronie PitchOps.',
       body: [
         'Ta strona jest obecnie statyczną stroną informacyjną.',
-        'Nie używa cookies marketingowych, chyba że w przyszłości zostaną dodane narzędzia analityczne.',
-        'Po dodaniu analityki ta strona powinna zostać zaktualizowana przed jej włączeniem.',
+        'Używa Google Analytics do zrozumienia zbiorczego ruchu i ulepszania publicznej strony.',
+        'Google Analytics może używać cookies lub podobnych technologii do pomiaru wizyt i sposobu korzystania ze strony.',
       ],
     },
     terms: {
