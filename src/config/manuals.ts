@@ -356,18 +356,18 @@ const stepsEn: ManualStep[] = [
     number: '8',
     title: 'Copy or move schedule chips',
     summary:
-      'Copying and moving schedule chips helps adjust repeated or shifted operational items without recreating entries.',
+      'Copying and moving schedule chips is done with drag & drop, which helps adjust repeated or shifted operational items without recreating entries.',
     screenshot: '08a-schedule-chip-copy-move-mobile.png',
     alt: 'PitchOps mobile schedule chip copy and move controls',
     bullets: [
-      'Copy an item when similar work or usage needs to be repeated.',
-      'Move an item when timing changes but the entry itself should stay the same.',
+      'Use drag & drop to copy an item when similar work or usage needs to be repeated.',
+      'Use drag & drop to move an item when timing changes but the entry itself should stay the same.',
       'This keeps plan adjustments quick during busy operational weeks.',
     ],
     callouts: [
       {
         title: 'Chip action',
-        text: 'Open the item action to copy or move the selected schedule entry.',
+        text: 'Use drag & drop to copy or move the selected schedule entry.',
         x: 34,
         y: 64,
       },
@@ -926,18 +926,18 @@ const stepsPl: ManualStep[] = [
     number: '8',
     title: 'Kopiowanie i przenoszenie elementów',
     summary:
-      'Kopiowanie i przenoszenie elementów harmonogramu pomaga obsłużyć powtarzane albo przesunięte pozycje bez tworzenia ich od początku.',
+      'Kopiowanie i przenoszenie elementów harmonogramu odbywa się przez drag & drop, co pomaga obsłużyć powtarzane albo przesunięte pozycje bez tworzenia ich od początku.',
     screenshot: '08a-schedule-chip-copy-move-mobile.png',
     alt: 'Mobilne opcje kopiowania i przenoszenia elementu harmonogramu PitchOps',
     bullets: [
-      'Kopiuj pozycję, gdy podobna praca lub aktywność ma zostać powtórzona.',
-      'Przenieś pozycję, gdy zmienia się termin, ale sam wpis ma pozostać ten sam.',
+      'Użyj drag & drop, aby skopiować pozycję, gdy podobna praca lub aktywność ma zostać powtórzona.',
+      'Użyj drag & drop, aby przenieść pozycję, gdy zmienia się termin, ale sam wpis ma pozostać ten sam.',
       'To przyspiesza korekty planu w intensywnych tygodniach operacyjnych.',
     ],
     callouts: [
       {
         title: 'Akcja elementu',
-        text: 'Otwórz akcje wpisu, aby skopiować albo przenieść wybraną pozycję harmonogramu.',
+        text: 'Użyj drag & drop, aby skopiować albo przenieść wybraną pozycję harmonogramu.',
         x: 34,
         y: 64,
       },
