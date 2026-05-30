@@ -957,7 +957,7 @@ h3 {
   border-radius: 18px;
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
   margin: 0;
-  padding: 14px;
+  padding: 10px;
 }
 
 .manual-shot-image {
@@ -969,9 +969,9 @@ h3 {
   border-radius: 14px;
   display: flex;
   justify-content: center;
-  min-height: 520px;
+  min-height: 0;
   overflow: hidden;
-  padding: 10px;
+  padding: 8px;
   position: relative;
 }
 
@@ -1430,7 +1430,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .manual-shot-image,
   .manual-placeholder {
     min-height: 440px;
   }

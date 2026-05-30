@@ -555,7 +555,7 @@ const stepsEn: ManualStep[] = [
       {
         title: 'Nutrient switch',
         text: 'Move between N, P, K or other visible nutrient categories.',
-        x: 30,
+        x: 24,
         y: 8,
       },
       {
@@ -1125,7 +1125,7 @@ const stepsPl: ManualStep[] = [
       {
         title: 'Przełącznik składników',
         text: 'Zmieniaj widok między N, P, K albo innymi widocznymi kategoriami.',
-        x: 30,
+        x: 24,
         y: 8,
       },
       {
