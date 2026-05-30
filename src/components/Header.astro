@@ -15,6 +15,7 @@ const languageEntries = (Object.entries(languages) as Array<[Lang, string]>).map
   code,
   lang === 'pl' ? polishLanguageLabels[code] : label,
 ]) as Array<[Lang, string]>;
+const mobileGuideLabel = lang === 'en' ? 'How' : content.nav.guide;
 ---
 
 <header class="site-header">
@@ -27,7 +28,10 @@ const languageEntries = (Object.entries(languages) as Array<[Lang, string]>).map
 
   <nav class="main-nav" aria-label="Primary navigation">
     <a href={`${localizedPath(lang, '/')}#product`}>{content.nav.product}</a>
-    <a href={`${localizedPath(lang, '/')}#guide`}>{content.nav.guide}</a>
+    <a href={`${localizedPath(lang, '/')}#guide`} aria-label={content.nav.guide}>
+      <span class="nav-label-desktop">{content.nav.guide}</span>
+      <span class="nav-label-mobile">{mobileGuideLabel}</span>
+    </a>
     <a class="nav-manuals-link" href={localizedPath(lang, '/manuals/')}>{content.nav.manuals}</a>
     <a href={`${localizedPath(lang, '/')}#roles`}>{content.nav.roles}</a>
     <a href={localizedPath(lang, '/contact/')}>{content.nav.contact}</a>

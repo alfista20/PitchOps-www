@@ -104,9 +104,19 @@ img {
   text-decoration: none;
 }
 
+.main-nav a {
+  flex: 0 0 auto;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
 .main-nav a:hover,
 .footer-links a:hover {
   color: var(--cyan-400);
+}
+
+.nav-label-mobile {
+  display: none;
 }
 
 .main-nav .nav-manuals-link {
@@ -1248,7 +1258,7 @@ h3 {
   .site-header {
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 12px;
     padding: 16px 20px;
   }
 
@@ -1258,10 +1268,22 @@ h3 {
   }
 
   .main-nav {
+    align-items: center;
     flex-basis: 100%;
+    flex-wrap: nowrap;
+    font-size: 0.86rem;
+    gap: 18px;
     order: 3;
     overflow-x: auto;
     padding-bottom: 2px;
+  }
+
+  .nav-label-desktop {
+    display: none;
+  }
+
+  .nav-label-mobile {
+    display: inline;
   }
 
   .header-actions {
