@@ -115,10 +115,6 @@ img {
   color: var(--cyan-400);
 }
 
-.nav-label-mobile {
-  display: none;
-}
-
 .main-nav .nav-manuals-link {
   background: linear-gradient(135deg, var(--cyan-400), var(--blue-500) 52%, var(--violet-500));
   background-clip: text;
@@ -1278,12 +1274,12 @@ h3 {
     padding-bottom: 2px;
   }
 
-  .nav-label-desktop {
-    display: none;
-  }
-
-  .nav-label-mobile {
-    display: inline;
+  .main-nav .nav-guide-link {
+    align-items: center;
+    display: inline-flex;
+    max-width: 5.4rem;
+    min-height: 2.2em;
+    white-space: normal;
   }
 
   .header-actions {
