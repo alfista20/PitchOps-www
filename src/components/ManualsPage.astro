@@ -96,41 +96,43 @@ const missingScreenshots = steps.filter((step) => !step.imageExists).map((step) 
                 </div>
               </div>
 
-              <figure class:list={['manual-shot-frame', !step.imageExists && 'manual-shot-missing']}>
-                {step.imageExists ? (
-                  <div class="manual-shot-image">
-                    <img src={imageUrl(step.screenshot)} alt={step.alt} loading="lazy" />
-                    {step.callouts.map((callout, index) => (
-                      <span
-                        class="manual-callout-marker"
-                        style={`--x: ${callout.x}%; --y: ${callout.y}%;`}
-                        aria-hidden="true"
-                      >
-                        {index + 1}
-                      </span>
-                    ))}
-                  </div>
-                ) : (
-                  <div class="manual-placeholder">
-                    <span>{content.labels.missingImage}</span>
-                    <strong>{step.screenshot}</strong>
-                    <p>{content.labels.missingImageText}</p>
-                  </div>
-                )}
-                <figcaption>{content.labels.exactFile}: {step.screenshot}</figcaption>
-              </figure>
-
-              <div class="manual-callout-list">
-                <strong>{content.labels.visualGuide}</strong>
-                {step.callouts.map((callout, index) => (
-                  <div class="manual-callout-card">
-                    <span>{index + 1}</span>
-                    <div>
-                      <h4>{callout.title}</h4>
-                      <p>{callout.text}</p>
+              <div class="manual-step-visual">
+                <figure class:list={['manual-shot-frame', !step.imageExists && 'manual-shot-missing']}>
+                  {step.imageExists ? (
+                    <div class="manual-shot-image">
+                      <img src={imageUrl(step.screenshot)} alt={step.alt} loading="lazy" />
+                      {step.callouts.map((callout, index) => (
+                        <span
+                          class="manual-callout-marker"
+                          style={`--x: ${callout.x}%; --y: ${callout.y}%;`}
+                          aria-hidden="true"
+                        >
+                          {index + 1}
+                        </span>
+                      ))}
                     </div>
-                  </div>
-                ))}
+                  ) : (
+                    <div class="manual-placeholder">
+                      <span>{content.labels.missingImage}</span>
+                      <strong>{step.screenshot}</strong>
+                      <p>{content.labels.missingImageText}</p>
+                    </div>
+                  )}
+                  <figcaption>{content.labels.exactFile}: {step.screenshot}</figcaption>
+                </figure>
+
+                <div class="manual-callout-list">
+                  <strong>{content.labels.visualGuide}</strong>
+                  {step.callouts.map((callout, index) => (
+                    <div class="manual-callout-card">
+                      <span>{index + 1}</span>
+                      <div>
+                        <h4>{callout.title}</h4>
+                        <p>{callout.text}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </article>
           ))}

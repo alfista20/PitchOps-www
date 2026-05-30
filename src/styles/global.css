@@ -916,7 +916,7 @@ h3 {
   border-radius: 18px;
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(260px, 0.74fr) minmax(260px, 0.62fr);
+  grid-template-columns: 1fr;
   overflow: hidden;
   padding: clamp(18px, 2.6vw, 30px);
   scroll-margin-top: 160px;
@@ -924,6 +924,7 @@ h3 {
 
 .manual-step-copy {
   align-self: start;
+  max-width: 920px;
 }
 
 .manual-step-copy h3 {
@@ -951,6 +952,13 @@ h3 {
   gap: 10px;
   margin: 0;
   padding-left: 18px;
+}
+
+.manual-step-visual {
+  align-items: start;
+  display: grid;
+  gap: clamp(18px, 2.4vw, 30px);
+  grid-template-columns: minmax(320px, 0.98fr) minmax(280px, 0.72fr);
 }
 
 .manual-shot-frame {
@@ -1057,9 +1065,9 @@ h3 {
 }
 
 .manual-callout-list {
+  align-self: start;
   display: grid;
   gap: 12px;
-  grid-column: 2;
 }
 
 .manual-callout-card {
@@ -1334,6 +1342,10 @@ h3 {
 
   .manual-step {
     padding: 16px;
+  }
+
+  .manual-step-visual {
+    grid-template-columns: 1fr;
   }
 
   .manual-shot-image,
