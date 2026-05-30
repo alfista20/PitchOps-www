@@ -1255,20 +1255,24 @@ h3 {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 12px;
-    padding: 16px 20px;
+    padding: 14px 20px;
+  }
+
+  .brand {
+    font-size: 0.96rem;
   }
 
   .brand-mark {
-    height: 36px;
-    width: 36px;
+    height: 34px;
+    width: 34px;
   }
 
   .main-nav {
     align-items: center;
     flex-basis: 100%;
     flex-wrap: nowrap;
-    font-size: 0.86rem;
-    gap: 18px;
+    font-size: 0.8rem;
+    gap: 16px;
     order: 3;
     overflow-x: auto;
     padding-bottom: 2px;
@@ -1277,6 +1281,27 @@ h3 {
   .header-actions {
     flex-basis: 100%;
     justify-content: space-between;
+  }
+
+  .language-switcher {
+    font-size: 0.78rem;
+    gap: 7px;
+  }
+
+  .language-switcher select {
+    min-height: 34px;
+    padding: 6px 26px 6px 9px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    min-height: 42px;
+    padding: 9px 16px;
+  }
+
+  .button-small {
+    min-height: 36px;
+    padding: 7px 13px;
   }
 
   .hero,
@@ -1294,15 +1319,37 @@ h3 {
   .hero,
   .manuals-hero {
     min-height: auto;
-    padding-top: 58px;
+    padding-top: 50px;
+  }
+
+  .section {
+    padding-bottom: 66px;
+    padding-top: 66px;
   }
 
   h1 {
-    font-size: clamp(2.75rem, 14vw, 4rem);
+    font-size: clamp(2.35rem, 12vw, 3.35rem);
   }
 
   h2 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.75rem, 8.4vw, 2.45rem);
+  }
+
+  h3 {
+    font-size: 1.04rem;
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.02rem;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
   }
 
   .stadium-panel {
@@ -1343,6 +1390,32 @@ h3 {
   .operations-band {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .walkthrough {
+    gap: 12px;
+  }
+
+  .walkthrough-step,
+  .info-card {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .walkthrough-step span {
+    font-size: 0.7rem;
+    margin-bottom: 14px;
+  }
+
+  .walkthrough-step h3 {
+    margin-bottom: 7px;
+  }
+
+  .walkthrough-step p,
+  .info-card p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 0;
   }
 
   .site-footer,
