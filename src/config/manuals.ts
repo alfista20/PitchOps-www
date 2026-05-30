@@ -67,7 +67,7 @@ const groupsEn: ManualGroup[] = [
     id: 'getting-started',
     eyebrow: 'Getting started',
     title: 'Start from the mobile operations dashboard',
-    text: 'Use the dashboard and weather permission flow before logging work on site.',
+    text: 'Use the dashboard and 48-hour weather forecast before logging work on site.',
   },
   {
     id: 'tasks',
@@ -119,9 +119,8 @@ const stepsEn: ManualStep[] = [
     alt: 'PitchOps mobile home dashboard',
     bullets: [
       'Use the visible tiles and cards as shortcuts into the main workflows.',
-      'The weather forecast shows the next 48 hours and supports operational awareness on site.',
+      'The 48-hour weather forecast appears after the user allows browser location access.',
       'Scroll the forecast chips horizontally to see later hours.',
-      'Weather needs location access so the forecast is local to the venue.',
     ],
     callouts: [
       {
@@ -145,38 +144,9 @@ const stepsEn: ManualStep[] = [
     ],
   },
   {
-    id: 'geo-permission',
-    group: 'getting-started',
-    number: '02',
-    title: 'Location permission',
-    summary:
-      'The phone or browser asks for location permission so PitchOps can display weather for the local venue area.',
-    screenshot: '02-geo-permission-mobile.png',
-    alt: 'Mobile browser location permission prompt',
-    bullets: [
-      'Allowing location improves the accuracy of the weather shown in the operations view.',
-      'The permission is used for local weather context, not for administration workflows.',
-      'If location is blocked, the weather section may be less useful on site.',
-    ],
-    callouts: [
-      {
-        title: 'Permission prompt',
-        text: 'Choose the browser permission option that allows local weather to load.',
-        x: 50,
-        y: 43,
-      },
-      {
-        title: 'Operational value',
-        text: 'Local conditions help the team judge timing, surface risk and work windows.',
-        x: 50,
-        y: 62,
-      },
-    ],
-  },
-  {
     id: 'task-add-modal',
     group: 'tasks',
-    number: '03',
+    number: '02',
     title: 'Log a task',
     summary:
       'This modal opens after tapping Log task. Use it for maintenance or operational work completed or planned on the pitch.',
@@ -212,7 +182,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'task-photos',
     group: 'tasks',
-    number: '04',
+    number: '03',
     title: 'Add task photos',
     summary:
       'Tasks can include photos, turning daily work into a clearer operational record for later review.',
@@ -241,7 +211,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'task-list-controls',
     group: 'tasks',
-    number: '05',
+    number: '04',
     title: 'Task list and controls',
     summary:
       'After saving a task, the task list becomes the practical place to search, filter and continue work through the mobile tabs.',
@@ -277,7 +247,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'usage-add-modal',
     group: 'usage',
-    number: '06',
+    number: '05',
     title: 'Log usage',
     summary:
       'This modal opens after tapping Log usage. Use it to record pitch load from training, matches, warm-ups or other use.',
@@ -313,7 +283,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'usage-list-controls',
     group: 'usage',
-    number: '07',
+    number: '06',
     title: 'Usage list and controls',
     summary:
       'The usage list helps the team review today, upcoming sessions and historical entries after records are saved.',
@@ -348,7 +318,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'schedule-week',
     group: 'schedule',
-    number: '08',
+    number: '07',
     title: 'Weekly schedule',
     summary:
       'The weekly schedule shows planned operational work and pitch usage in the same planning rhythm.',
@@ -383,7 +353,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'schedule-copy-move',
     group: 'schedule',
-    number: '08a',
+    number: '07a',
     title: 'Copy or move schedule chips',
     summary:
       'Copying and moving schedule chips helps adjust repeated or shifted operational items without recreating entries.',
@@ -412,7 +382,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'schedule-week-filters',
     group: 'schedule',
-    number: '08b',
+    number: '07b',
     title: 'Weekly view filters',
     summary:
       'In the weekly schedule view, choose whether to display Tasks, Usage or All records.',
@@ -441,7 +411,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'schedule-month',
     group: 'schedule',
-    number: '09',
+    number: '08',
     title: 'Monthly schedule',
     summary:
       'The monthly schedule gives a higher-level view across the month for planning and review.',
@@ -470,7 +440,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'schedule-multiday',
     group: 'schedule',
-    number: '09b',
+    number: '08b',
     title: 'Add a multiday event',
     summary:
       'This modal opens after pressing the plus button in the date window. Use it for events spanning more than one day.',
@@ -505,7 +475,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'stats-overview',
     group: 'stats',
-    number: '10',
+    number: '09',
     title: 'Stats overview',
     summary:
       'Use this single screen to summarize operations with KPI cards, filters, charts and PDF export.',
@@ -541,7 +511,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'agronomy-overview',
     group: 'agronomy',
-    number: '11',
+    number: '10',
     title: 'Agronomy overview',
     summary:
       'The agronomy area is for fertilizing history and nutrient records connected to the operational timeline.',
@@ -570,7 +540,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'agronomy-chart',
     group: 'agronomy',
-    number: '12',
+    number: '11',
     title: 'Agronomy chart view',
     summary:
       'The chart view helps analyze nutrient history and visible trends without claiming automatic recommendations.',
@@ -599,7 +569,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'mobile-menu',
     group: 'settings',
-    number: '13a',
+    number: '12a',
     title: 'Mobile menu navigation',
     summary:
       'The mobile menu is useful when the user needs a compact route to less frequent areas of the module.',
@@ -627,7 +597,7 @@ const stepsEn: ManualStep[] = [
   {
     id: 'settings-token-links',
     group: 'settings',
-    number: '13b',
+    number: '12b',
     title: 'Settings, lists and token links',
     summary:
       'Settings control the practical options available in mobile reporting: equipment, staff, venues and token links.',
@@ -667,7 +637,7 @@ const groupsPl: ManualGroup[] = [
     id: 'getting-started',
     eyebrow: 'Pierwsze kroki',
     title: 'Zacznij od mobilnego panelu operacji',
-    text: 'Panel główny i zgoda na lokalizację przygotowują użytkownika do pracy na obiekcie.',
+    text: 'Panel główny i prognoza pogody 48h przygotowują użytkownika do pracy na obiekcie.',
   },
   {
     id: 'tasks',
@@ -719,9 +689,8 @@ const stepsPl: ManualStep[] = [
     alt: 'Mobilny panel główny PitchOps',
     bullets: [
       'Widoczne kafle i karty prowadzą do głównych przepływów pracy.',
-      'Prognoza pogody pokazuje najbliższe 48 godzin i wspiera decyzje na obiekcie.',
+      'Prognoza pogody na 48 godzin pojawia się po zezwoleniu na dostęp do lokalizacji w przeglądarce.',
       'Karty prognozy można przewijać poziomo, aby zobaczyć dalsze godziny.',
-      'Sekcja pogody wymaga dostępu do lokalizacji, żeby pokazać warunki dla danego obiektu.',
     ],
     callouts: [
       {
@@ -745,38 +714,9 @@ const stepsPl: ManualStep[] = [
     ],
   },
   {
-    id: 'geo-permission',
-    group: 'getting-started',
-    number: '02',
-    title: 'Zgoda na lokalizację',
-    summary:
-      'Telefon albo przeglądarka prosi o zgodę na lokalizację, aby PitchOps mógł pokazać pogodę dla okolicy obiektu.',
-    screenshot: '02-geo-permission-mobile.png',
-    alt: 'Mobilne pytanie przeglądarki o zgodę na lokalizację',
-    bullets: [
-      'Zgoda na lokalizację zwiększa trafność pogody widocznej w operacjach.',
-      'Lokalizacja służy do kontekstu pogodowego, nie do administracji systemem.',
-      'Po zablokowaniu lokalizacji sekcja pogody może być mniej użyteczna na obiekcie.',
-    ],
-    callouts: [
-      {
-        title: 'Komunikat zgody',
-        text: 'Wybierz opcję przeglądarki, która pozwala załadować lokalną pogodę.',
-        x: 50,
-        y: 43,
-      },
-      {
-        title: 'Wartość operacyjna',
-        text: 'Lokalne warunki pomagają ocenić czas prac, ryzyko dla nawierzchni i okna wykonania.',
-        x: 50,
-        y: 62,
-      },
-    ],
-  },
-  {
     id: 'task-add-modal',
     group: 'tasks',
-    number: '03',
+    number: '02',
     title: 'Rejestracja zadania',
     summary:
       'Ten modal otwiera się po wybraniu opcji rejestracji zadania. Służy do zapisu prac utrzymaniowych lub operacyjnych na murawie.',
@@ -812,7 +752,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'task-photos',
     group: 'tasks',
-    number: '04',
+    number: '03',
     title: 'Dodawanie zdjęć do zadania',
     summary:
       'Zadania mogą zawierać zdjęcia, dzięki czemu codzienna praca staje się czytelnym zapisem operacyjnym.',
@@ -841,7 +781,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'task-list-controls',
     group: 'tasks',
-    number: '05',
+    number: '04',
     title: 'Lista zadań i sterowanie',
     summary:
       'Po zapisaniu zadania lista zadań jest miejscem do wyszukiwania, filtrowania i dalszej pracy przez dolny pasek kart.',
@@ -877,7 +817,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'usage-add-modal',
     group: 'usage',
-    number: '06',
+    number: '05',
     title: 'Rejestracja użycia',
     summary:
       'Ten modal otwiera się po wybraniu rejestracji użycia. Służy do zapisu obciążenia murawy przez trening, mecz, rozgrzewkę albo inne użycie.',
@@ -913,7 +853,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'usage-list-controls',
     group: 'usage',
-    number: '07',
+    number: '06',
     title: 'Lista użycia i sterowanie',
     summary:
       'Lista użycia pomaga przeglądać dzisiejsze wpisy, nadchodzące aktywności i historię po zapisaniu rekordów.',
@@ -948,7 +888,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'schedule-week',
     group: 'schedule',
-    number: '08',
+    number: '07',
     title: 'Harmonogram tygodniowy',
     summary:
       'Harmonogram tygodniowy pokazuje zaplanowane prace operacyjne i użycie boiska w jednym rytmie planowania.',
@@ -983,7 +923,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'schedule-copy-move',
     group: 'schedule',
-    number: '08a',
+    number: '07a',
     title: 'Kopiowanie i przenoszenie elementów',
     summary:
       'Kopiowanie i przenoszenie elementów harmonogramu pomaga obsłużyć powtarzane albo przesunięte pozycje bez tworzenia ich od początku.',
@@ -1012,7 +952,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'schedule-week-filters',
     group: 'schedule',
-    number: '08b',
+    number: '07b',
     title: 'Filtry widoku tygodnia',
     summary:
       'W widoku tygodniowym użytkownik może wybrać, czy widzi zadania, użycie czy wszystkie rekordy.',
@@ -1041,7 +981,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'schedule-month',
     group: 'schedule',
-    number: '09',
+    number: '08',
     title: 'Harmonogram miesięczny',
     summary:
       'Harmonogram miesięczny daje szerszy widok planu w całym miesiącu.',
@@ -1070,7 +1010,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'schedule-multiday',
     group: 'schedule',
-    number: '09b',
+    number: '08b',
     title: 'Dodanie wydarzenia wielodniowego',
     summary:
       'Ten modal otwiera się po naciśnięciu plusa w oknie daty. Służy do wydarzeń trwających więcej niż jeden dzień.',
@@ -1105,7 +1045,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'stats-overview',
     group: 'stats',
-    number: '10',
+    number: '09',
     title: 'Przegląd statystyk',
     summary:
       'Ten jeden ekran podsumowuje operacje przez karty KPI, zakres czasu, filtry, wykresy i eksport PDF.',
@@ -1141,7 +1081,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'agronomy-overview',
     group: 'agronomy',
-    number: '11',
+    number: '10',
     title: 'Przegląd agronomii',
     summary:
       'Obszar agronomii służy do historii nawożenia i zapisów składników połączonych z operacyjną osią czasu.',
@@ -1170,7 +1110,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'agronomy-chart',
     group: 'agronomy',
-    number: '12',
+    number: '11',
     title: 'Widok wykresu agronomicznego',
     summary:
       'Widok wykresu pomaga analizować historię składników i widoczne trendy, ale nie oznacza automatycznych rekomendacji agronomicznych.',
@@ -1199,7 +1139,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'mobile-menu',
     group: 'settings',
-    number: '13a',
+    number: '12a',
     title: 'Nawigacja w menu mobilnym',
     summary:
       'Menu mobilne jest przydatne, gdy użytkownik potrzebuje szybkiego przejścia do rzadziej używanych miejsc modułu.',
@@ -1227,7 +1167,7 @@ const stepsPl: ManualStep[] = [
   {
     id: 'settings-token-links',
     group: 'settings',
-    number: '13b',
+    number: '12b',
     title: 'Ustawienia, listy i linki tokenowe',
     summary:
       'Ustawienia sterują praktycznymi opcjami raportowania mobilnego: sprzętem, personelem, obiektami i linkami tokenowymi.',
