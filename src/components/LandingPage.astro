@@ -1,7 +1,8 @@
 ---
 import { site } from '../config/site';
+import { localizedPath } from '../i18n/languages';
 
-const { content } = Astro.props;
+const { content, lang } = Astro.props;
 const imageBase = '/images/pitch-operations/';
 const img = (name: string) => `${imageBase}${name}.png`;
 ---
@@ -17,6 +18,7 @@ const img = (name: string) => `${imageBase}${name}.png`;
     </div>
     <div class="hero-actions" aria-label={content.hero.primaryButton}>
       <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.hero.primaryButton}</a>
+      <a class="button button-secondary button-manual" href={localizedPath(lang, '/manuals/')}>{content.nav.manuals}</a>
       <a class="button button-secondary" href="#guide">{content.hero.secondaryButton}</a>
     </div>
   </div>

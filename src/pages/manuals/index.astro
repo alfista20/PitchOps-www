@@ -1,0 +1,13 @@
+---
+import Landing from '../../layouts/Landing.astro';
+import ManualsPage from '../../components/ManualsPage.astro';
+import { manualsByLang } from '../../config/manuals';
+import { defaultLang } from '../../i18n/languages';
+
+const lang = defaultLang;
+const content = manualsByLang[lang];
+---
+
+<Landing title={content.meta.title} description={content.meta.description} lang={lang}>
+  <ManualsPage content={content} lang={lang} />
+</Landing>

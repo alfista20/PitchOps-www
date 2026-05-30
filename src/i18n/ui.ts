@@ -5,7 +5,7 @@ type Feature = Card & { image: string; alt: string };
 
 type PageContent = {
   meta: { title: string; description: string };
-  nav: { product: string; guide: string; roles: string; contact: string; login: string; language: string };
+  nav: { product: string; guide: string; manuals: string; roles: string; contact: string; login: string; language: string };
   hero: {
     eyebrow: string;
     headline: string;
@@ -30,6 +30,7 @@ type PageContent = {
     cookies: string;
     terms: string;
     contact: string;
+    manuals: string;
     openApp: string;
     guide: string;
   };
@@ -47,7 +48,7 @@ const en: PageContent = {
     description:
       'PitchOps is a premium sport-tech workspace for football pitch operations, maintenance history, usage tracking, scheduling, reporting and agronomy records.',
   },
-  nav: { product: 'Product', guide: 'How it works', roles: 'Roles', contact: 'Contact', login: 'Open PitchOps', language: 'Language' },
+  nav: { product: 'Product', guide: 'How it works', manuals: 'Manuals', roles: 'Roles', contact: 'Contact', login: 'Open PitchOps', language: 'Language' },
   hero: {
     eyebrow: 'Football operations command center',
     headline: 'Control every pitch operation from one premium workspace.',
@@ -132,6 +133,7 @@ const en: PageContent = {
     cookies: 'Cookie Policy',
     terms: 'Terms',
     contact: 'Contact',
+    manuals: 'Manuals',
     openApp: 'Open PitchOps',
     guide: 'Guide',
   },
@@ -150,8 +152,8 @@ const en: PageContent = {
       description: 'Cookie information for the PitchOps public website.',
       body: [
         'This website is currently a static informational website.',
-        'It uses Google Analytics to understand aggregate website traffic and improve the public website.',
-        'Google Analytics may use cookies or similar technologies to measure visits and usage patterns.',
+        'It does not use marketing cookies.',
+        'If privacy-friendly analytics are added later, this policy will be updated before those tools are used.',
       ],
     },
     terms: {
@@ -183,7 +185,7 @@ const pl: PageContent = {
     description:
       'PitchOps porządkuje operacje na murawie: utrzymanie, wykorzystanie, harmonogramy, raporty i zapisy agronomiczne.',
   },
-  nav: { product: 'Produkt', guide: 'Jak działa', roles: 'Role', contact: 'Kontakt', login: 'Otwórz PitchOps', language: 'Język' },
+  nav: { product: 'Produkt', guide: 'Jak działa', manuals: 'Instrukcje obsługi', roles: 'Role', contact: 'Kontakt', login: 'Otwórz PitchOps', language: 'Język' },
   hero: {
     eyebrow: 'Centrum dowodzenia operacjami na murawie',
     headline: 'Kontroluj każdą operację na murawie z jednej premium przestrzeni roboczej.',
@@ -268,6 +270,7 @@ const pl: PageContent = {
     cookies: 'Polityka cookies',
     terms: 'Regulamin',
     contact: 'Kontakt',
+    manuals: 'Instrukcje obsługi',
     openApp: 'Otwórz PitchOps',
     guide: 'Przewodnik',
   },
@@ -286,8 +289,8 @@ const pl: PageContent = {
       description: 'Informacje o cookies na stronie PitchOps.',
       body: [
         'Ta strona jest obecnie statyczną stroną informacyjną.',
-        'Używa Google Analytics do zrozumienia zbiorczego ruchu i ulepszania publicznej strony.',
-        'Google Analytics może używać cookies lub podobnych technologii do pomiaru wizyt i sposobu korzystania ze strony.',
+        'Nie używa marketingowych plików cookies.',
+        'Jeżeli w przyszłości zostanie dodana analityka przyjazna prywatności, ta polityka zostanie zaktualizowana przed jej użyciem.',
       ],
     },
     terms: {
@@ -322,6 +325,7 @@ const de: PageContent = {
   nav: {
     product: 'Produkt',
     guide: 'So funktioniert es',
+    manuals: 'Anleitungen',
     roles: 'Rollen',
     contact: 'Kontakt',
     login: 'PitchOps öffnen',
@@ -411,6 +415,7 @@ const de: PageContent = {
     cookies: 'Cookies',
     terms: 'Bedingungen',
     contact: 'Kontakt',
+    manuals: 'Anleitungen',
     openApp: 'PitchOps öffnen',
     guide: 'Guide',
   },
@@ -429,8 +434,8 @@ const de: PageContent = {
       description: 'Informationen zu Cookies auf der öffentlichen PitchOps-Website.',
       body: [
         'Diese Website ist derzeit eine statische Informationswebsite.',
-        'Sie verwendet Google Analytics, um aggregierten Website-Traffic zu verstehen und die öffentliche Website zu verbessern.',
-        'Google Analytics kann Cookies oder ähnliche Technologien verwenden, um Besuche und Nutzungsmuster zu messen.',
+        'Sie verwendet keine Marketing-Cookies.',
+        'Wenn später datenschutzfreundliche Analysefunktionen hinzugefügt werden, wird diese Richtlinie vor deren Nutzung aktualisiert.',
       ],
     },
     terms: {
@@ -462,7 +467,7 @@ const es: PageContent = {
     description:
       'PitchOps organiza las operaciones de campos de fútbol: mantenimiento, uso, calendarios, informes y registros agronómicos.',
   },
-  nav: { product: 'Producto', guide: 'Cómo funciona', roles: 'Roles', contact: 'Contacto', login: 'Abrir PitchOps', language: 'Idioma' },
+  nav: { product: 'Producto', guide: 'Cómo funciona', manuals: 'Manuales', roles: 'Roles', contact: 'Contacto', login: 'Abrir PitchOps', language: 'Idioma' },
   hero: {
     eyebrow: 'Centro de control para operaciones de campos de fútbol',
     headline: 'Controla cada operación del campo desde un espacio premium.',
@@ -547,6 +552,7 @@ const es: PageContent = {
     cookies: 'Cookies',
     terms: 'Términos',
     contact: 'Contacto',
+    manuals: 'Manuales',
     openApp: 'Abrir PitchOps',
     guide: 'Guía',
   },
@@ -565,8 +571,8 @@ const es: PageContent = {
       description: 'Información sobre cookies en el sitio público de PitchOps.',
       body: [
         'Este sitio es actualmente un sitio informativo estático.',
-        'Usa Google Analytics para entender el tráfico agregado y mejorar el sitio público.',
-        'Google Analytics puede usar cookies o tecnologías similares para medir visitas y patrones de uso.',
+        'No utiliza cookies de marketing.',
+        'Si se añade analítica respetuosa con la privacidad más adelante, esta política se actualizará antes de usar esas herramientas.',
       ],
     },
     terms: {
@@ -598,7 +604,7 @@ const fr: PageContent = {
     description:
       'PitchOps structure les opérations des terrains de football : entretien, utilisation, planning, reporting et dossiers agronomiques.',
   },
-  nav: { product: 'Produit', guide: 'Fonctionnement', roles: 'Rôles', contact: 'Contact', login: 'Ouvrir PitchOps', language: 'Langue' },
+  nav: { product: 'Produit', guide: 'Fonctionnement', manuals: 'Manuels', roles: 'Rôles', contact: 'Contact', login: 'Ouvrir PitchOps', language: 'Langue' },
   hero: {
     eyebrow: 'Centre de commandement des opérations terrain',
     headline: 'Pilotez chaque opération terrain depuis un espace premium.',
@@ -683,6 +689,7 @@ const fr: PageContent = {
     cookies: 'Cookies',
     terms: 'Conditions',
     contact: 'Contact',
+    manuals: 'Manuels',
     openApp: 'Ouvrir PitchOps',
     guide: 'Guide',
   },
@@ -701,8 +708,8 @@ const fr: PageContent = {
       description: 'Informations sur les cookies du site public PitchOps.',
       body: [
         'Ce site est actuellement un site d’information statique.',
-        'Il utilise Google Analytics pour comprendre le trafic agrégé et améliorer le site public.',
-        'Google Analytics peut utiliser des cookies ou technologies similaires pour mesurer les visites et les usages.',
+        'Il n’utilise pas de cookies marketing.',
+        'Si des outils d’analyse respectueux de la vie privée sont ajoutés plus tard, cette politique sera mise à jour avant leur utilisation.',
       ],
     },
     terms: {
@@ -734,7 +741,7 @@ const pt: PageContent = {
     description:
       'PitchOps organiza operações de campos de futebol: manutenção, utilização, calendários, relatórios e registos agronómicos.',
   },
-  nav: { product: 'Produto', guide: 'Como funciona', roles: 'Funções', contact: 'Contacto', login: 'Abrir PitchOps', language: 'Idioma' },
+  nav: { product: 'Produto', guide: 'Como funciona', manuals: 'Manuais', roles: 'Funções', contact: 'Contacto', login: 'Abrir PitchOps', language: 'Idioma' },
   hero: {
     eyebrow: 'Centro de comando das operações de futebol',
     headline: 'Controle cada operação do relvado a partir de um espaço premium.',
@@ -819,6 +826,7 @@ const pt: PageContent = {
     cookies: 'Cookies',
     terms: 'Termos',
     contact: 'Contacto',
+    manuals: 'Manuais',
     openApp: 'Abrir PitchOps',
     guide: 'Guia',
   },
@@ -837,8 +845,8 @@ const pt: PageContent = {
       description: 'Informação sobre cookies no site público do PitchOps.',
       body: [
         'Este site é atualmente um site informativo estático.',
-        'Usa Google Analytics para compreender o tráfego agregado e melhorar o site público.',
-        'O Google Analytics pode usar cookies ou tecnologias semelhantes para medir visitas e padrões de utilização.',
+        'Não usa cookies de marketing.',
+        'Se forem adicionadas análises respeitadoras da privacidade mais tarde, esta política será atualizada antes da sua utilização.',
       ],
     },
     terms: {

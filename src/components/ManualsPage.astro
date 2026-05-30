@@ -1,0 +1,152 @@
+---
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { site } from '../config/site';
+import type { ManualContent } from '../config/manuals';
+
+const { content } = Astro.props as { content: ManualContent };
+const imageRoot = join(process.cwd(), 'public', 'images', 'manuals', 'mobile');
+const imageUrl = (filename: string) => `/images/manuals/mobile/${filename}`;
+const steps = content.steps.map((step) => ({
+  ...step,
+  imageExists: existsSync(join(imageRoot, step.screenshot)),
+}));
+const missingScreenshots = steps.filter((step) => !step.imageExists).map((step) => step.screenshot);
+---
+
+<section class="manuals-hero">
+  <div class="manuals-hero-copy">
+    <p class="eyebrow">{content.hero.eyebrow}</p>
+    <h1>{content.hero.title}</h1>
+    <p class="hero-subtitle">{content.hero.lead}</p>
+    <div class="hero-actions">
+      <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.hero.primaryButton}</a>
+      <a class="button button-secondary" href="#manual-flow">{content.hero.secondaryButton}</a>
+    </div>
+  </div>
+  <div class="manuals-hero-visual" aria-hidden="true">
+    <img src="/images/brand/pitchops-stadium-hero.png" alt="" loading="eager" />
+    <div class="manuals-hero-device">
+      <span>PitchOps</span>
+      <strong>{content.groups[0].title}</strong>
+      <p>{content.groups[0].text}</p>
+    </div>
+  </div>
+</section>
+
+<section class="manuals-overview" id="manual-flow">
+  <div class="manuals-overview-copy">
+    <p class="eyebrow">{content.overview.eyebrow}</p>
+    <h2>{content.overview.title}</h2>
+    <p>{content.overview.text}</p>
+  </div>
+  <div class="manuals-overview-cards">
+    {content.overview.cards.map((card) => (
+      <article>
+        <h3>{card.title}</h3>
+        <p>{card.text}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<nav class="manuals-jump-nav" aria-label={content.labels.contents}>
+  {content.groups.map((group) => (
+    <a href={`#${group.id}`}>{group.eyebrow}</a>
+  ))}
+  <a href="#token-users">{content.labels.tokenUsers}</a>
+</nav>
+
+{missingScreenshots.length > 0 && (
+  <aside class="manuals-missing-report" aria-label={content.labels.missingReportTitle}>
+    <div>
+      <p class="eyebrow">{content.labels.missingReportTitle}</p>
+      <p>{content.labels.missingReportText}</p>
+    </div>
+    <ul>
+      {missingScreenshots.map((filename) => <li>{filename}</li>)}
+    </ul>
+  </aside>
+)}
+
+<div class="manuals-flow">
+  {content.groups.map((group) => {
+    const groupSteps = steps.filter((step) => step.group === group.id);
+
+    return (
+      <section class="manual-group" id={group.id}>
+        <div class="manual-group-heading">
+          <p class="eyebrow">{group.eyebrow}</p>
+          <h2>{group.title}</h2>
+          <p>{group.text}</p>
+        </div>
+
+        <div class="manual-step-stack">
+          {groupSteps.map((step) => (
+            <article class="manual-step" id={step.id}>
+              <div class="manual-step-copy">
+                <span class="manual-step-number">{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.summary}</p>
+                <div class="manual-workflow">
+                  <strong>{content.labels.workflow}</strong>
+                  <ul>
+                    {step.bullets.map((bullet) => <li>{bullet}</li>)}
+                  </ul>
+                </div>
+              </div>
+
+              <figure class:list={['manual-shot-frame', !step.imageExists && 'manual-shot-missing']}>
+                {step.imageExists ? (
+                  <div class="manual-shot-image">
+                    <img src={imageUrl(step.screenshot)} alt={step.alt} loading="lazy" />
+                    {step.callouts.map((callout, index) => (
+                      <span
+                        class="manual-callout-marker"
+                        style={`--x: ${callout.x}%; --y: ${callout.y}%;`}
+                        aria-hidden="true"
+                      >
+                        {index + 1}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <div class="manual-placeholder">
+                    <span>{content.labels.missingImage}</span>
+                    <strong>{step.screenshot}</strong>
+                    <p>{content.labels.missingImageText}</p>
+                  </div>
+                )}
+                <figcaption>{content.labels.exactFile}: {step.screenshot}</figcaption>
+              </figure>
+
+              <div class="manual-callout-list">
+                <strong>{content.labels.visualGuide}</strong>
+                {step.callouts.map((callout, index) => (
+                  <div class="manual-callout-card">
+                    <span>{index + 1}</span>
+                    <div>
+                      <h4>{callout.title}</h4>
+                      <p>{callout.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+  })}
+</div>
+
+<section class="token-user-section" id="token-users">
+  <div>
+    <p class="eyebrow">{content.tokenSection.eyebrow}</p>
+    <h2>{content.tokenSection.title}</h2>
+    <p>{content.tokenSection.text}</p>
+  </div>
+  <ul>
+    {content.tokenSection.points.map((point) => <li>{point}</li>)}
+  </ul>
+</section>

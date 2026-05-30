@@ -1,0 +1,17 @@
+---
+import Landing from '../../../layouts/Landing.astro';
+import ManualsPage from '../../../components/ManualsPage.astro';
+import { manualsByLang } from '../../../config/manuals';
+import { prefixedLangs, type Lang } from '../../../i18n/languages';
+
+export function getStaticPaths() {
+  return prefixedLangs.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const content = manualsByLang[lang];
+---
+
+<Landing title={content.meta.title} description={content.meta.description} lang={lang}>
+  <ManualsPage content={content} lang={lang} />
+</Landing>
