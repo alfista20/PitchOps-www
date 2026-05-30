@@ -1274,14 +1274,6 @@ h3 {
     padding-bottom: 2px;
   }
 
-  .main-nav .nav-guide-link {
-    align-items: center;
-    display: inline-flex;
-    max-width: 5.4rem;
-    min-height: 2.2em;
-    white-space: normal;
-  }
-
   .header-actions {
     flex-basis: 100%;
     justify-content: space-between;
