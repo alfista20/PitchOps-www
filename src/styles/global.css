@@ -109,6 +109,20 @@ img {
   color: var(--cyan-400);
 }
 
+.main-nav .nav-manuals-link {
+  background: linear-gradient(135deg, var(--cyan-400), var(--blue-500) 52%, var(--violet-500));
+  background-clip: text;
+  color: var(--cyan-400);
+  font-weight: 900;
+  text-shadow: 0 0 22px rgba(37, 199, 255, 0.28);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-nav .nav-manuals-link:hover {
+  filter: brightness(1.14);
+}
+
 .header-actions {
   align-items: center;
   display: flex;
@@ -837,11 +851,11 @@ h3 {
 
 .manuals-jump-nav {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   margin: 0 auto;
   max-width: 1180px;
   overflow-x: auto;
-  padding: 18px 5vw 56px;
+  padding: 16px 5vw 46px;
   position: sticky;
   top: 76px;
   z-index: 12;
@@ -865,9 +879,10 @@ h3 {
   border-radius: 999px;
   color: var(--silver-200);
   flex: 0 0 auto;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 850;
-  padding: 9px 13px;
+  line-height: 1.15;
+  padding: 8px 11px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -1327,9 +1342,30 @@ h3 {
   }
 
   .manuals-jump-nav {
-    padding: 10px 20px 28px;
+    display: grid;
+    gap: 8px;
+    grid-auto-columns: minmax(112px, max-content);
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, minmax(34px, auto));
+    max-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 20px 24px;
     position: relative;
+    scroll-snap-type: x proximity;
     top: auto;
+  }
+
+  .manuals-jump-nav a {
+    align-items: center;
+    display: inline-flex;
+    font-size: 0.76rem;
+    justify-content: center;
+    min-height: 34px;
+    padding: 7px 10px;
+    scroll-snap-align: start;
+    text-align: center;
+    white-space: normal;
   }
 
   .manuals-missing-report {

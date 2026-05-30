@@ -28,7 +28,7 @@ const languageEntries = (Object.entries(languages) as Array<[Lang, string]>).map
   <nav class="main-nav" aria-label="Primary navigation">
     <a href={`${localizedPath(lang, '/')}#product`}>{content.nav.product}</a>
     <a href={`${localizedPath(lang, '/')}#guide`}>{content.nav.guide}</a>
-    <a href={localizedPath(lang, '/manuals/')}>{content.nav.manuals}</a>
+    <a class="nav-manuals-link" href={localizedPath(lang, '/manuals/')}>{content.nav.manuals}</a>
     <a href={`${localizedPath(lang, '/')}#roles`}>{content.nav.roles}</a>
     <a href={localizedPath(lang, '/contact/')}>{content.nav.contact}</a>
   </nav>
