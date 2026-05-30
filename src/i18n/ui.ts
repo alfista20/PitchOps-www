@@ -11,9 +11,7 @@ type PageContent = {
     headline: string;
     subheadline: string;
     description: string;
-    signals: string[];
-    primaryButton: string;
-    secondaryButton: string;
+    manualsButton: string;
   };
   heroCard: { eyebrow: string; title: string; text: string };
   strip: string[];
@@ -56,9 +54,7 @@ const en: PageContent = {
       'PitchOps helps football venues plan, log, review and report pitch work with the clarity expected from modern sport operations.',
     description:
       'Move beyond scattered spreadsheets, chat updates and unstructured photos. Bring maintenance, usage, schedules, stats and agronomy records into a single operational command center.',
-    signals: ['Every field', 'Every day', 'Matchday ready'],
-    primaryButton: 'Open PitchOps',
-    secondaryButton: 'Explore Pitch Operations',
+    manualsButton: 'Open User Manuals',
   },
   heroCard: {
     eyebrow: 'Live operations',
@@ -193,9 +189,7 @@ const pl: PageContent = {
       'PitchOps pomaga obiektom piłkarskim planować, rejestrować, przeglądać i raportować pracę na murawie z nowoczesną klarownością.',
     description:
       'Zamiast rozproszonych arkuszy, wiadomości i zdjęć bez struktury, PitchOps łączy utrzymanie, użycie, harmonogramy, statystyki i agronomię w jednym centrum operacyjnym.',
-    signals: ['Każda murawa', 'Każdy dzień', 'Gotowość meczowa'],
-    primaryButton: 'Otwórz PitchOps',
-    secondaryButton: 'Poznaj operacje na murawie',
+    manualsButton: 'Otwórz Instrukcje Obsługi',
   },
   heroCard: {
     eyebrow: 'Operacje na żywo',
@@ -338,9 +332,7 @@ const de: PageContent = {
       'PitchOps hilft Fußballanlagen, Platzarbeiten mit der Klarheit moderner Sportbetriebe zu planen, zu erfassen, zu prüfen und zu berichten.',
     description:
       'Ersetzen Sie verstreute Tabellen, Chat-Updates und unstrukturierte Fotos durch einen zentralen Arbeitsbereich für Pflege, Nutzung, Zeitpläne, Statistiken und Agronomie.',
-    signals: ['Jeder Platz', 'Jeden Tag', 'Bereit für den Spieltag'],
-    primaryButton: 'PitchOps öffnen',
-    secondaryButton: 'Platzbetrieb entdecken',
+    manualsButton: 'Anleitungen öffnen',
   },
   heroCard: {
     eyebrow: 'Live-Betrieb',
@@ -475,9 +467,7 @@ const es: PageContent = {
       'PitchOps ayuda a los recintos de fútbol a planificar, registrar, revisar e informar el trabajo del césped con la claridad que exige la operación deportiva moderna.',
     description:
       'Deja atrás hojas de cálculo dispersas, mensajes de chat y fotos sin estructura. Reúne mantenimiento, uso, calendarios, estadísticas y agronomía en un solo centro operativo.',
-    signals: ['Cada campo', 'Cada día', 'Listo para el partido'],
-    primaryButton: 'Abrir PitchOps',
-    secondaryButton: 'Explorar operaciones de césped',
+    manualsButton: 'Abrir manuales',
   },
   heroCard: {
     eyebrow: 'Operaciones en vivo',
@@ -612,9 +602,7 @@ const fr: PageContent = {
       'PitchOps aide les sites de football à planifier, consigner, revoir et reporter les travaux terrain avec la clarté attendue des opérations sportives modernes.',
     description:
       'Remplacez les tableurs dispersés, les messages de chat et les photos sans structure par un centre opérationnel unique pour l’entretien, l’utilisation, les plannings, les statistiques et l’agronomie.',
-    signals: ['Chaque terrain', 'Chaque jour', 'Prêt pour le match'],
-    primaryButton: 'Ouvrir PitchOps',
-    secondaryButton: 'Explorer les opérations terrain',
+    manualsButton: 'Ouvrir les manuels',
   },
   heroCard: {
     eyebrow: 'Opérations en direct',
@@ -749,9 +737,7 @@ const pt: PageContent = {
       'PitchOps ajuda recintos de futebol a planear, registar, rever e reportar o trabalho no relvado com a clareza esperada nas operações desportivas modernas.',
     description:
       'Deixe para trás folhas de cálculo dispersas, mensagens de chat e fotografias sem estrutura. Reúna manutenção, utilização, calendários, estatísticas e agronomia num único centro operacional.',
-    signals: ['Cada campo', 'Todos os dias', 'Pronto para o jogo'],
-    primaryButton: 'Abrir PitchOps',
-    secondaryButton: 'Explorar operações de relvado',
+    manualsButton: 'Abrir manuais',
   },
   heroCard: {
     eyebrow: 'Operações em direto',

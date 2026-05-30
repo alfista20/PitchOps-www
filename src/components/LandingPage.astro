@@ -13,13 +13,8 @@ const img = (name: string) => `${imageBase}${name}.png`;
     <h1>{content.hero.headline}</h1>
     <p class="hero-subtitle">{content.hero.subheadline}</p>
     <p class="hero-copy">{content.hero.description}</p>
-    <div class="hero-signals" aria-label={content.hero.eyebrow}>
-      {content.hero.signals.map((signal: string) => <span>{signal}</span>)}
-    </div>
-    <div class="hero-actions" aria-label={content.hero.primaryButton}>
-      <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.hero.primaryButton}</a>
-      <a class="button button-secondary button-manual" href={localizedPath(lang, '/manuals/')}>{content.nav.manuals}</a>
-      <a class="button button-secondary" href="#guide">{content.hero.secondaryButton}</a>
+    <div class="hero-actions hero-actions-single" aria-label={content.hero.manualsButton}>
+      <a class="button hero-manual-cta" href={localizedPath(lang, '/manuals/')}>{content.hero.manualsButton}</a>
     </div>
   </div>
 
