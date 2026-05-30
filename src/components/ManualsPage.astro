@@ -29,22 +29,6 @@ const missingScreenshots = steps.filter((step) => !step.imageExists).map((step) 
   </div>
 </section>
 
-<section class="manuals-overview" id="manual-flow">
-  <div class="manuals-overview-copy">
-    <p class="eyebrow">{content.overview.eyebrow}</p>
-    <h2>{content.overview.title}</h2>
-    <p>{content.overview.text}</p>
-  </div>
-  <div class="manuals-overview-cards">
-    {content.overview.cards.map((card) => (
-      <article>
-        <h3>{card.title}</h3>
-        <p>{card.text}</p>
-      </article>
-    ))}
-  </div>
-</section>
-
 <nav class="manuals-jump-nav" aria-label={content.labels.contents}>
   {content.groups.map((group) => (
     <a href={`#${group.id}`}>{group.eyebrow}</a>
@@ -64,7 +48,7 @@ const missingScreenshots = steps.filter((step) => !step.imageExists).map((step) 
   </aside>
 )}
 
-<div class="manuals-flow">
+<div class="manuals-flow" id="manual-flow">
   {content.groups.map((group) => {
     const groupSteps = steps.filter((step) => step.group === group.id);
 
