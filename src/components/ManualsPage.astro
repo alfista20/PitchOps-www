@@ -1,7 +1,6 @@
 ---
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { site } from '../config/site';
 import type { ManualContent } from '../config/manuals';
 
 const { content } = Astro.props as { content: ManualContent };
@@ -19,10 +18,6 @@ const missingScreenshots = steps.filter((step) => !step.imageExists).map((step) 
     <p class="eyebrow">{content.hero.eyebrow}</p>
     <h1>{content.hero.title}</h1>
     <p class="hero-subtitle">{content.hero.lead}</p>
-    <div class="hero-actions">
-      <a class="button" href={site.appUrl} target="_blank" rel="noopener noreferrer">{content.hero.primaryButton}</a>
-      <a class="button button-secondary" href="#manual-flow">{content.hero.secondaryButton}</a>
-    </div>
   </div>
   <div class="manuals-hero-visual" aria-hidden="true">
     <img src="/images/brand/pitchops-stadium-hero.png" alt="" loading="eager" />
