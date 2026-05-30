@@ -131,7 +131,7 @@ const en: PageContent = {
     contact: 'Contact',
     manuals: 'Manuals',
     openApp: 'Open PitchOps',
-    guide: 'Guide',
+    guide: 'Überblick',
   },
   infoPages: {
     privacy: {
@@ -179,7 +179,7 @@ const pl: PageContent = {
   meta: {
     title: 'PitchOps | Premium platforma operacji na murawie',
     description:
-      'PitchOps porządkuje operacje na murawie: utrzymanie, wykorzystanie, harmonogramy, raporty i zapisy agronomiczne.',
+      'PitchOps porządkuje operacje na murawie: pielęgnację, wykorzystanie, harmonogramy, raporty i zapisy agronomiczne.',
   },
   nav: { product: 'Produkt', guide: 'Jak działa', manuals: 'Instrukcje obsługi', roles: 'Role', contact: 'Kontakt', login: 'Otwórz PitchOps', language: 'Język' },
   hero: {
@@ -188,7 +188,7 @@ const pl: PageContent = {
     subheadline:
       'PitchOps pomaga obiektom piłkarskim planować, rejestrować, przeglądać i raportować pracę na murawie z nowoczesną klarownością.',
     description:
-      'Zamiast rozproszonych arkuszy, wiadomości i zdjęć bez struktury, PitchOps łączy utrzymanie, użycie, harmonogramy, statystyki i agronomię w jednym centrum operacyjnym.',
+      'Zamiast rozproszonych arkuszy, wiadomości i zdjęć bez struktury, PitchOps łączy pielęgnację, użycie, harmonogramy, statystyki i agronomię w jednym centrum operacyjnym.',
     manualsButton: 'Otwórz Instrukcje Obsługi',
   },
   heroCard: {
@@ -196,24 +196,24 @@ const pl: PageContent = {
     title: 'Gotowość murawy',
     text: 'Zadania, użycie, harmonogram i agronomia połączone w jednym widoku.',
   },
-  strip: ['Operacje na murawie', 'Historia utrzymania', 'Śledzenie użycia', 'Planowanie harmonogramu', 'Statystyki i raporty', 'Zapisy agronomiczne'],
+  strip: ['Operacje na murawie', 'Historia pielęgnacji', 'Śledzenie użycia', 'Planowanie harmonogramu', 'Statystyki i raporty', 'Zapisy agronomiczne'],
   why: {
     eyebrow: 'Dlaczego PitchOps',
     title: 'Operacje na murawie tracą kontrolę, gdy kluczowy kontekst żyje w wielu miejscach.',
-    problems: ['Rozproszone arkusze Excel', 'Aktualizacje w WhatsApp', 'Zdjęcia bez struktury', 'Słaba historia utrzymania', 'Słaba widoczność wielu obiektów'],
+    problems: ['Rozproszone arkusze Excel', 'Aktualizacje w WhatsApp', 'Zdjęcia bez struktury', 'Słaba historia pielęgnacji', 'Słaba widoczność wielu obiektów'],
     solutionTitle: 'PitchOps staje się centrum dowodzenia operacjami.',
     solutionText:
-      'Zmienia codzienną pracę na murawie w uporządkowane zapisy, wspólną widoczność i wiarygodne raportowanie dla menedżerów, zespołów utrzymania i liderów obiektów.',
+      'Zmienia codzienną pracę na murawie w uporządkowane zapisy, wspólną widoczność i wiarygodne raportowanie dla menedżerów, zespołów pielęgnacji murawy i liderów obiektów.',
   },
   module: {
     eyebrow: 'Moduł operacji na murawie',
     title: 'Aktywne miejsce pracy do codziennego zarządzania murawą.',
     text:
-      'Moduł operacji na murawie łączy panel obiektu, zadania utrzymaniowe, wykorzystanie boiska, harmonogram tygodnia i miesiąca, statystyki oraz historię nawożenia. Zespoły widzą, co się wydarzyło, co jest zaplanowane i co wymaga uwagi.',
+      'Moduł operacji na murawie łączy panel obiektu, zadania pielęgnacyjne, wykorzystanie boiska, harmonogram tygodnia i miesiąca, statystyki oraz historię nawożenia. Zespoły widzą, co się wydarzyło, co jest zaplanowane i co wymaga uwagi.',
   },
   operations: [
     { title: 'Planuj', text: 'Koordynuj zadania, użycie i okna harmonogramu zanim pojawi się presja.' },
-    { title: 'Rejestruj', text: 'Zapisuj utrzymanie, notatki zespołu, zdjęcia i obciążenie murawy w kontekście.' },
+    { title: 'Rejestruj', text: 'Zapisuj pielęgnację, notatki zespołu, zdjęcia i obciążenie murawy w kontekście.' },
     { title: 'Raportuj', text: 'Zmieniaj historię operacyjną w materiał do przeglądów i decyzji.' },
   ],
   guide: {
@@ -221,7 +221,7 @@ const pl: PageContent = {
     title: 'Jak poruszać się po operacjach na murawie',
     steps: [
       { title: 'Panel obiektu', text: 'Zacznij od statusu obiektu, aktywnych prac i nadchodzących sygnałów.' },
-      { title: 'Rejestr zadań', text: 'Zapisuj prace utrzymaniowe z notatkami, personelem i zdjęciami.' },
+      { title: 'Rejestr zadań', text: 'Zapisuj prace pielęgnacyjne z notatkami, personelem i zdjęciami.' },
       { title: 'Rejestr użycia', text: 'Rejestruj mecze, treningi i rozgrzewki, aby historia murawy była wiarygodna.' },
       { title: 'Harmonogram', text: 'Przeglądaj prace i użycie w widoku tygodnia oraz miesiąca.' },
       { title: 'Statystyki', text: 'Zmieniaj zapisy w wnioski operacyjne i gotowe raporty.' },
@@ -234,11 +234,11 @@ const pl: PageContent = {
     kicker: 'Operacje na murawie',
     items: [
       { title: 'Panel obiektu: widok dowodzenia na każdy dzień', text: 'Premium punkt startowy dla statusu obiektu, aktywnych prac, nadchodzącego użycia i gotowości.', image: 'dashboard-dark.png', alt: 'Ciemny panel obiektu PitchOps' },
-      { title: 'Lista zadań: utrzymanie pod kontrolą', text: 'Codzienne prace, odpowiedzialność i status wykonania pozostają widoczne dla zespołu utrzymania.', image: 'task-list-dark.png', alt: 'Ciemna lista zadań PitchOps' },
+      { title: 'Lista zadań: pielęgnacja pod kontrolą', text: 'Codzienne prace, odpowiedzialność i status wykonania pozostają widoczne dla zespołu pielęgnacji murawy.', image: 'task-list-dark.png', alt: 'Ciemna lista zadań PitchOps' },
       { title: 'Rejestr zadania: zapisz dowody pracy', text: 'Notatki, personel, kontekst wykonania i zdjęcia trafiają do jednego uporządkowanego rekordu.', image: 'task-modal-light.png', alt: 'Modal zadania PitchOps' },
       { title: 'Rejestr użycia: śledź obciążenie piłkarskie', text: 'Mecze, treningi i rozgrzewki budują wiarygodną historię aktywności każdej murawy.', image: 'usage-dark.png', alt: 'Ciemny rejestr użycia PitchOps' },
       { title: 'Harmonogram tygodnia: koordynuj wykonanie', text: 'Zadania i użycie w tygodniowym widoku pomagają utrzymać decyzje blisko presji meczowej.', image: 'schedule-week-dark.png', alt: 'Ciemny harmonogram tygodnia PitchOps' },
-      { title: 'Harmonogram miesiąca: zobacz szerszy plan', text: 'Okna utrzymaniowe, rytm użycia i zapotrzebowanie obiektu są widoczne w perspektywie miesiąca.', image: 'schedule-month-light.png', alt: 'Harmonogram miesiąca PitchOps' },
+      { title: 'Harmonogram miesiąca: zobacz szerszy plan', text: 'Okna pielęgnacyjne, rytm użycia i zapotrzebowanie obiektu są widoczne w perspektywie miesiąca.', image: 'schedule-month-light.png', alt: 'Harmonogram miesiąca PitchOps' },
       { title: 'Statystyki: zmień zapisy w wnioski', text: 'Codzienne rekordy zamieniają się w sumy, wzorce i widoki raportowe dla lepszych decyzji.', image: 'stats-dark.png', alt: 'Ciemne statystyki PitchOps' },
       { title: 'Historia nawożenia: agronomia bez zgadywania', text: 'Aplikacje, produkty i projekcja składników są połączone z operacyjnym kontekstem murawy.', image: 'fertilizing-history-dark.png', alt: 'Ciemna historia nawożenia PitchOps' },
     ],
@@ -249,13 +249,13 @@ const pl: PageContent = {
     cards: [
       { title: 'Menedżer regionu', text: 'Koordynuje wiele obiektów i ocenia spójność operacyjną.' },
       { title: 'Menedżer obiektu', text: 'Prowadzi lokalny harmonogram, zadania, użycie i raporty.' },
-      { title: 'Zespół utrzymania', text: 'Rejestruje codzienne prace i utrzymuje dokładność danych.' },
+      { title: 'Zespół pielęgnacji murawy', text: 'Rejestruje codzienne prace i utrzymuje dokładność danych.' },
       { title: 'Podgląd / tylko odczyt', text: 'Przegląda status i raporty bez zmiany danych operacyjnych.' },
     ],
   },
   cta: {
     title: 'Otwórz PitchOps dla uporządkowanych operacji na murawie.',
-    text: 'Daj każdemu obiektowi premium centrum operacyjne dla utrzymania, użycia, planowania i raportowania.',
+    text: 'Daj każdemu obiektowi premium centrum operacyjne dla pielęgnacji, użycia, planowania i raportowania.',
     button: 'Otwórz PitchOps',
   },
   footer: {
@@ -393,7 +393,7 @@ const de: PageContent = {
       { title: 'Regionalmanager', text: 'Koordiniert mehrere Anlagen und prüft operative Konsistenz.' },
       { title: 'Anlagenmanager', text: 'Steuert lokalen Zeitplan, Aufgaben, Nutzung und Reporting.' },
       { title: 'Platzteam', text: 'Erfasst tägliche Pflegearbeiten und hält Datensätze genau.' },
-      { title: 'Viewer / nur Lesen', text: 'Prüft Status und Berichte, ohne operative Daten zu ändern.' },
+      { title: 'Ansicht / nur Lesen', text: 'Prüft Status und Berichte, ohne operative Daten zu ändern.' },
     ],
   },
   cta: {
@@ -409,7 +409,7 @@ const de: PageContent = {
     contact: 'Kontakt',
     manuals: 'Anleitungen',
     openApp: 'PitchOps öffnen',
-    guide: 'Guide',
+    guide: 'Überblick',
   },
   infoPages: {
     privacy: {
@@ -481,7 +481,7 @@ const es: PageContent = {
     problems: ['Hojas de Excel dispersas', 'Actualizaciones por WhatsApp', 'Fotos sin estructura', 'Historial de mantenimiento débil', 'Poca visibilidad entre recintos'],
     solutionTitle: 'PitchOps se convierte en el centro de control operativo.',
     solutionText:
-      'Convierte el trabajo diario del césped en registros estructurados, visibilidad compartida e informes confiables para responsables, equipos de mantenimiento y líderes del recinto.',
+      'Convierte el trabajo diario del césped en registros estructurados, visibilidad compartida e informes fiables para responsables, equipos de mantenimiento y líderes del recinto.',
   },
   module: {
     eyebrow: 'Módulo de operaciones de césped',
@@ -525,7 +525,7 @@ const es: PageContent = {
     eyebrow: 'Roles',
     title: 'Acceso claro para cada responsabilidad operativa.',
     cards: [
-      { title: 'Responsable regional', text: 'Coordina varios recintos y revisa la consistencia operativa.' },
+      { title: 'Responsable regional', text: 'Coordina varios recintos y revisa la coherencia operativa.' },
       { title: 'Responsable del recinto', text: 'Gestiona el calendario local, tareas, uso e informes.' },
       { title: 'Equipo de mantenimiento', text: 'Registra el mantenimiento diario y mantiene los datos precisos.' },
       { title: 'Visor / solo lectura', text: 'Revisa estado e informes sin cambiar datos operativos.' },
@@ -581,7 +581,7 @@ const es: PageContent = {
         'Para preguntas sobre el producto, demostraciones o conversaciones operativas, contacta con el equipo de PitchOps.',
         'El sitio público es informativo; el soporte y los flujos de cuenta se gestionan dentro de la aplicación PitchOps o por canales comerciales acordados.',
       ],
-      emailLabel: 'Email',
+      emailLabel: 'Correo electrónico',
       buttonLabel: 'Abrir PitchOps',
     },
   },
@@ -627,7 +627,7 @@ const fr: PageContent = {
   operations: [
     { title: 'Planifier', text: 'Coordonnez les tâches, l’utilisation et les créneaux avant l’arrivée de la pression.' },
     { title: 'Consigner', text: 'Capturez l’entretien, les notes d’équipe, les photos et la charge du terrain en contexte.' },
-    { title: 'Reporter', text: 'Transformez l’historique opérationnel en éléments utiles pour les revues et décisions.' },
+    { title: 'Rendre compte', text: 'Transformez l’historique opérationnel en éléments utiles pour les revues et décisions.' },
   ],
   guide: {
     eyebrow: 'Parcours guidé',
@@ -637,7 +637,7 @@ const fr: PageContent = {
       { title: 'Consigner une tâche', text: 'Documentez l’entretien avec notes, contexte d’équipe et photos.' },
       { title: 'Consigner l’utilisation', text: 'Enregistrez matchs, entraînements et échauffements pour garder un historique fiable.' },
       { title: 'Planning', text: 'Revoyez travaux et utilisation dans les vues semaine et mois.' },
-      { title: 'Statistiques', text: 'Transformez les enregistrements en insights opérationnels et rapports exportables.' },
+      { title: 'Statistiques', text: 'Transformez les enregistrements en enseignements opérationnels et rapports exportables.' },
       { title: 'Historique de fertilisation', text: 'Suivez les applications et projections nutritives pour les décisions agronomiques.' },
     ],
   },
@@ -652,7 +652,7 @@ const fr: PageContent = {
       { title: 'Consigner l’utilisation : suivre la charge football', text: 'Enregistrez matchs, entraînements et échauffements pour créer un historique fiable par terrain.', image: 'usage-dark.png', alt: 'Journal d’utilisation sombre PitchOps' },
       { title: 'Planning semaine : coordonner l’exécution', text: 'Revoyez tâches et utilisation sur la semaine afin de relier les décisions quotidiennes à la pression du match.', image: 'schedule-week-dark.png', alt: 'Planning semaine sombre PitchOps' },
       { title: 'Planning mois : voir le plan global', text: 'Planifiez les fenêtres d’entretien, le rythme d’utilisation et la demande du site sur le mois.', image: 'schedule-month-light.png', alt: 'Planning mensuel PitchOps' },
-      { title: 'Statistiques : transformer les données en insights', text: 'Convertissez les enregistrements quotidiens en totaux, tendances et vues de reporting pour mieux décider.', image: 'stats-dark.png', alt: 'Statistiques sombres PitchOps' },
+      { title: 'Statistiques : transformer les données en enseignements', text: 'Convertissez les enregistrements quotidiens en totaux, tendances et vues de reporting pour mieux décider.', image: 'stats-dark.png', alt: 'Statistiques sombres PitchOps' },
       { title: 'Historique de fertilisation : l’agronomie sans approximation', text: 'Suivez applications, produits et projections nutritives sans perdre le contexte opérationnel.', image: 'fertilizing-history-dark.png', alt: 'Historique de fertilisation sombre PitchOps' },
     ],
   },
@@ -679,7 +679,7 @@ const fr: PageContent = {
     contact: 'Contact',
     manuals: 'Manuels',
     openApp: 'Ouvrir PitchOps',
-    guide: 'Guide',
+    guide: 'Parcours',
   },
   infoPages: {
     privacy: {
@@ -787,7 +787,7 @@ const pt: PageContent = {
       { title: 'Registar utilização: acompanhar a carga futebolística', text: 'Registe jogos, treinos e aquecimentos para que cada campo tenha um histórico fiável.', image: 'usage-dark.png', alt: 'Registo escuro de utilização no PitchOps' },
       { title: 'Calendário semanal: coordenar execução', text: 'Reveja tarefas e utilização ao longo da semana para ligar decisões diárias à pressão do jogo.', image: 'schedule-week-dark.png', alt: 'Calendário semanal escuro do PitchOps' },
       { title: 'Calendário mensal: ver o plano maior', text: 'Planeie janelas de manutenção, ritmo de utilização e procura do recinto ao longo do mês.', image: 'schedule-month-light.png', alt: 'Calendário mensal do PitchOps' },
-      { title: 'Estatísticas: transformar registos em insight', text: 'Transforme registos diários em totais, padrões e vistas de relatório para melhores decisões.', image: 'stats-dark.png', alt: 'Estatísticas escuras do PitchOps' },
+      { title: 'Estatísticas: transformar registos em informação útil', text: 'Transforme registos diários em totais, padrões e vistas de relatório para melhores decisões.', image: 'stats-dark.png', alt: 'Estatísticas escuras do PitchOps' },
       { title: 'Histórico de fertilização: agronomia sem adivinhação', text: 'Acompanhe aplicações, produtos e projeções de nutrientes sem perder o contexto operacional.', image: 'fertilizing-history-dark.png', alt: 'Histórico escuro de fertilização do PitchOps' },
     ],
   },
@@ -851,7 +851,7 @@ const pt: PageContent = {
         'Para perguntas sobre o produto, demonstrações ou conversas operacionais, contacte a equipa PitchOps.',
         'O site público é informativo; suporte e fluxos de conta acontecem na aplicação PitchOps ou em canais comerciais acordados.',
       ],
-      emailLabel: 'Email',
+      emailLabel: 'E-mail',
       buttonLabel: 'Abrir PitchOps',
     },
   },
